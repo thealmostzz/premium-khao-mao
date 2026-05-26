@@ -1,6 +1,10 @@
-﻿/* -------------------------------------------------------------
+/* -------------------------------------------------------------
  * Premium Khao Mao - Client Interaction & Dynamic Logic
  * ------------------------------------------------------------- */
+
+// --- Dev Mode Flag ---
+// เปลี่ยนเป็น false ก่อน deploy ไป production เพื่อซ่อน debug toast
+const IS_DEV_MODE = false;
 
 // --- Mock Data ---
 const PRODUCTS = [
@@ -453,11 +457,64 @@ function trackEvent(eventName, eventParams = {}) {
     });
   }
 
-  // 2. Log in console
-  console.log(`[Analytics Event] Name: "${eventName}"`, eventParams);
+  // 2. Log in console (dev only)
+  if (IS_DEV_MODE) {
+    console.log(`[Analytics Event] Name: "${eventName}"`, eventParams);
+  }
 
-  // 3. Render a gorgeous Premium Toast visual notification (Development / Presentation Proof of Concept)
-  showToastNotification(eventName, eventParams);
+  // 3. แสดง Toast debug notification เฉพาะ dev mode เท่านั้น
+  if (IS_DEV_MODE) {
+    showToastNotification(eventName, eventParams);
+  }
+}
+
+// --- Human-readable descriptions for analytics events ---
+const EVENT_DESCRIPTIONS = {
+  "scroll_section": {
+    label: "เลื่อนดูรีวิว",
+    params: {
+      "carousel_action": {
+        "next_review": "👉 ผู้ใช้กดดูรีวิวถัดไป",
+        "prev_review": "👈 ผู้ใช้กดดูรีวิวก่อนหน้า"
+      }
+    }
+  },
+  "click_product_cta": {
+    label: "คลิกสินค้า",
+    params: {
+      "product_name": (val) => `🛒 คลิกสั่งซื้อ: ${val}`
+    }
+  },
+  "faq_open": {
+    label: "เปิดคำถาม FAQ",
+    params: {
+      "question": (val) => `❓ เปิดดู: ${val}`
+    }
+  },
+  "click_line_cta": {
+    label: "คลิกปุ่ม LINE",
+    params: {
+      "section": (val) => `💬 คลิก LINE จากส่วน: ${val}`
+    }
+  }
+};
+
+function getEventDescription(eventName, eventParams) {
+  const desc = EVENT_DESCRIPTIONS[eventName];
+  if (!desc) return JSON.stringify(eventParams);
+
+  // Try to find a matching param description
+  for (const [key, value] of Object.entries(eventParams)) {
+    if (desc.params && desc.params[key]) {
+      const paramDesc = desc.params[key];
+      if (typeof paramDesc === "object" && paramDesc[value]) {
+        return paramDesc[value];
+      } else if (typeof paramDesc === "function") {
+        return paramDesc(value);
+      }
+    }
+  }
+  return JSON.stringify(eventParams);
 }
 
 function showToastNotification(eventName, eventParams) {
@@ -469,6 +526,11 @@ function showToastNotification(eventName, eventParams) {
     container.className = "fixed top-20 right-4 z-50 flex flex-col space-y-2 pointer-events-none";
     document.body.appendChild(container);
   }
+
+  // Resolve human-readable label and description
+  const eventDesc = EVENT_DESCRIPTIONS[eventName];
+  const eventLabel = eventDesc ? eventDesc.label : eventName;
+  const paramDescription = getEventDescription(eventName, eventParams);
 
   // Create individual toast element safely
   const toast = document.createElement("div");
@@ -483,8 +545,8 @@ function showToastNotification(eventName, eventParams) {
     </div>
     <div>
       <h5 class="text-xs font-semibold uppercase tracking-wider text-gold">Analytics Event Fired</h5>
-      <p class="text-sm font-bold font-serifThai">${eventName}</p>
-      <p class="text-[10px] text-ivory/80 truncate mt-0.5">${JSON.stringify(eventParams)}</p>
+      <p class="text-sm font-bold font-serifThai">${eventLabel}</p>
+      <p class="text-[10px] text-ivory/80 mt-0.5">${paramDescription}</p>
     </div>
   `;
 
