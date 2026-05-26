@@ -5,3 +5,7 @@
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Node/Tailwind build outputs
+node_modules/
+dist/
