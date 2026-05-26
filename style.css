@@ -1,0 +1,164 @@
+/* -------------------------------------------------------------
+ * Premium Khao Mao - Custom Styles stylesheet
+ * ------------------------------------------------------------- */
+
+/* Define CSS Variables for harmonious colors */
+:root {
+  --color-cream: #F8F1E6;
+  --color-ivory: #FFFDF8;
+  --color-leaf: #214D38;
+  --color-rice-green: #7C9A62;
+  --color-gold: #C9A45C;
+  --color-rice-brown: #8B6A45;
+  --color-charcoal: #2B2B2B;
+  --color-beige: #E7D8C2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-leaf);
+  border-radius: 5px;
+  border: 2px solid var(--color-cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rice-green);
+}
+
+/* Base resets & styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans Thai', sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif Thai', serif;
+}
+
+/* Premium Gold Shimmer/Gradient Utility */
+.premium-gold-text {
+  background: linear-gradient(135deg, #8B6A45 0%, #C9A45C 50%, #8B6A45 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+}
+
+.premium-gold-bg {
+  background: linear-gradient(135deg, #E7D8C2 0%, #C9A45C 50%, #E7D8C2 100%);
+}
+
+.premium-gold-border {
+  border-color: transparent;
+  background-image: linear-gradient(var(--color-ivory), var(--color-ivory)), 
+                    linear-gradient(135deg, #8B6A45 0%, #C9A45C 50%, #8B6A45 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Navigation */
+.nav-blur {
+  background-color: rgba(255, 253, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth Fade In Scroll classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Zoom Effect */
+.card-hover-zoom {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-hover-zoom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(33, 77, 56, 0.1), 0 10px 10px -5px rgba(33, 77, 56, 0.04);
+}
+
+/* FAQ Accordion Transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-active .accordion-content {
+  max-height: 500px; /* Adjust according to content size */
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-chevron {
+  transition: transform 0.3s ease;
+}
+
+.accordion-active .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+/* Custom Micro-animations */
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-slide-right {
+  transition: transform 0.3s ease;
+}
+.hover-slide-right:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Sticky CTA Slide-up Animation */
+.sticky-cta-slide {
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              opacity 0.3s ease;
+}
+
+.sticky-cta-slide.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Safe Area Padding for iOS Devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-safe {
+    bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+}
