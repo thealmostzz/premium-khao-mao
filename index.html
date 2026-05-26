@@ -587,41 +587,45 @@
         </div>
 
         <!-- Timeline Flow: Desktop horizontal, Mobile vertical -->
-        <div class="relative flex flex-col md:flex-row justify-between items-start md:items-stretch gap-8 md:gap-4 md:before:content-[''] md:before:absolute md:before:top-10 md:before:left-4 md:before:right-4 md:before:h-0.5 md:before:bg-beige md:before:z-0">
+        <div class="relative flex flex-col md:flex-row items-start md:items-stretch gap-6 md:gap-4">
+          <!-- Mobile vertical connector line -->
+          <div class="absolute left-1/2 top-6 bottom-6 w-0.5 bg-beige/80 z-0 md:hidden"></div>
+          <!-- Desktop horizontal connector line -->
+          <div class="hidden md:block absolute top-10 left-4 right-4 h-0.5 bg-beige z-0"></div>
           
           <!-- Step 1 -->
-          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left flex-1 px-4 reveal">
-            <div class="w-14 h-14 bg-leaf text-white border-4 border-cream rounded-full flex items-center justify-center font-bold text-lg shadow-sm font-serifThai mb-4">1</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">เก็บเกี่ยวยามเช้าตรู่</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">คัดเฉพาะรวงข้าวเหนียวระยะน้ำนมสุก 70% ยามน้ำค้างเกาะ สัมผัสนิ่มหอมพิเศษ</p>
+          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left px-4 w-full max-w-sm mx-auto md:max-w-none md:flex-1 reveal">
+            <div class="w-12 h-12 md:w-14 md:h-14 bg-leaf text-white border-2 md:border-4 border-cream rounded-full flex items-center justify-center font-bold text-base md:text-lg shadow-sm font-serifThai mb-3">1</div>
+            <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">เก็บเกี่ยวยามเช้าตรู่</h3>
+            <p class="text-riceBrown text-sm md:text-xs leading-relaxed">คัดเฉพาะรวงข้าวเหนียวระยะน้ำนมสุก 70% ยามน้ำค้างเกาะ สัมผัสนิ่มหอมพิเศษ</p>
           </div>
 
           <!-- Step 2 -->
-          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left flex-1 px-4 reveal">
-            <div class="w-14 h-14 bg-leaf text-white border-4 border-cream rounded-full flex items-center justify-center font-bold text-lg shadow-sm font-serifThai mb-4">2</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">คั่วเตาดินฟืนธรรมชาติ</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">คั่วผ่านกระทะเหล็กเตาฟืนโคนดินเผาด้วยความร้อนสม่ำเสมอ จนแกลบทองแห้งกลิ่นหอมอบอวล</p>
+          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left px-4 w-full max-w-sm mx-auto md:max-w-none md:flex-1 reveal">
+            <div class="w-12 h-12 md:w-14 md:h-14 bg-leaf text-white border-2 md:border-4 border-cream rounded-full flex items-center justify-center font-bold text-base md:text-lg shadow-sm font-serifThai mb-3">2</div>
+            <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">คั่วเตาดินฟืนธรรมชาติ</h3>
+            <p class="text-riceBrown text-sm md:text-xs leading-relaxed">คั่วผ่านกระทะเหล็กเตาฟืนโคนดินเผาด้วยความร้อนสม่ำเสมอ จนแกลบทองแห้งกลิ่นหอมอบอวล</p>
           </div>
 
           <!-- Step 3 -->
-          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left flex-1 px-4 reveal">
-            <div class="w-14 h-14 bg-leaf text-white border-4 border-cream rounded-full flex items-center justify-center font-bold text-lg shadow-sm font-serifThai mb-4">3</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">ตำตำซ้อมมือ</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">ตำผ่านครกไม้โบราณจนเปลือกแกลบร่อนออกอย่างสมบูรณ์ เมล็ดข้าวแบนเหนียวนุ่มสีขี้ม้าธรรมชาติ</p>
+          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left px-4 w-full max-w-sm mx-auto md:max-w-none md:flex-1 reveal">
+            <div class="w-12 h-12 md:w-14 md:h-14 bg-leaf text-white border-2 md:border-4 border-cream rounded-full flex items-center justify-center font-bold text-base md:text-lg shadow-sm font-serifThai mb-3">3</div>
+            <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">ตำตำซ้อมมือ</h3>
+            <p class="text-riceBrown text-sm md:text-xs leading-relaxed">ตำผ่านครกไม้โบราณจนเปลือกแกลบร่อนออกอย่างสมบูรณ์ เมล็ดข้าวแบนเหนียวนุ่มสีขี้ม้าธรรมชาติ</p>
           </div>
 
           <!-- Step 4 -->
-          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left flex-1 px-4 reveal">
-            <div class="w-14 h-14 bg-leaf text-white border-4 border-cream rounded-full flex items-center justify-center font-bold text-lg shadow-sm font-serifThai mb-4">4</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">คลุกปรุงสดใหม่</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">คลุกเคล้าเนื้อมะพร้าวน้ำหอมอ่อนสดบางเฉียบ และเกลือสมุทร น้ำตาลทรายออร์แกนิกหวานน้อยละมุนพอดี</p>
+          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left px-4 w-full max-w-sm mx-auto md:max-w-none md:flex-1 reveal">
+            <div class="w-12 h-12 md:w-14 md:h-14 bg-leaf text-white border-2 md:border-4 border-cream rounded-full flex items-center justify-center font-bold text-base md:text-lg shadow-sm font-serifThai mb-3">4</div>
+            <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">คลุกปรุงสดใหม่</h3>
+            <p class="text-riceBrown text-sm md:text-xs leading-relaxed">คลุกเคล้าเนื้อมะพร้าวน้ำหอมอ่อนสดบางเฉียบ และเกลือสมุทร น้ำตาลทรายออร์แกนิกหวานน้อยละมุนพอดี</p>
           </div>
 
           <!-- Step 5 -->
-          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left flex-1 px-4 reveal">
-            <div class="w-14 h-14 bg-leaf text-white border-4 border-cream rounded-full flex items-center justify-center font-bold text-lg shadow-sm font-serifThai mb-4">5</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">ล็อกแพ็กสุญญากาศ</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">บรรจุลงถุงสุญญากาศกันออกซิเจนแล้วนำเข้าตู้เย็นแช่แข็งอย่างรวดเร็ว รอส่งเย็นทั่วประเทศ</p>
+          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left px-4 w-full max-w-sm mx-auto md:max-w-none md:flex-1 reveal">
+            <div class="w-12 h-12 md:w-14 md:h-14 bg-leaf text-white border-2 md:border-4 border-cream rounded-full flex items-center justify-center font-bold text-base md:text-lg shadow-sm font-serifThai mb-3">5</div>
+            <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">ล็อกแพ็กสุญญากาศ</h3>
+            <p class="text-riceBrown text-sm md:text-xs leading-relaxed">บรรจุลงถุงสุญญากาศกันออกซิเจนแล้วนำเข้าตู้เย็นแช่แข็งอย่างรวดเร็ว รอส่งเย็นทั่วประเทศ</p>
           </div>
 
         </div>
@@ -643,43 +647,79 @@
           
           <!-- Image 1 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
-            <div class="absolute inset-0 bg-[#E0D7C9] flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown">คัดเมล็ดข้าวเม่าอ่อนสด</span>
+            <img
+              src="assets/images/hero_khao_mao.png"
+              alt="คัดเมล็ดข้าวเม่าอ่อนสด"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+              <span class="text-xs font-bold text-riceBrown px-3 text-center">คัดเมล็ดข้าวเม่าอ่อนสด</span>
             </div>
           </div>
 
           <!-- Image 2 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
-            <div class="absolute inset-0 bg-[#E0D7C9] flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown">คั่วเตาดินฟืนธรรมชาติ</span>
+            <img
+              src="assets/images/heritage_craft.jpg"
+              alt="คั่วเตาดินฟืนธรรมชาติ"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+              <span class="text-xs font-bold text-riceBrown px-3 text-center">คั่วเตาดินฟืนธรรมชาติ</span>
             </div>
           </div>
 
           <!-- Image 3 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
-            <div class="absolute inset-0 bg-[#E0D7C9] flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown">คลุกมะพร้าวน้ำหอมอ่อน</span>
+            <img
+              src="assets/images/khao_mao_kluk.jpg"
+              alt="คลุกมะพร้าวน้ำหอมอ่อน"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+              <span class="text-xs font-bold text-riceBrown px-3 text-center">คลุกมะพร้าวน้ำหอมอ่อน</span>
             </div>
           </div>
 
           <!-- Image 4 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
-            <div class="absolute inset-0 bg-[#E0D7C9] flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown">ชุดของขวัญ Premium Gift Set</span>
+            <img
+              src="assets/images/premium_gift_set.jpg"
+              alt="ชุดของขวัญ Premium Gift Set"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+              <span class="text-xs font-bold text-riceBrown px-3 text-center">ชุดของขวัญ Premium Gift Set</span>
             </div>
           </div>
 
           <!-- Image 5 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
-            <div class="absolute inset-0 bg-[#E0D7C9] flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown">เสิร์ฟคู่ชาร้อนยามบ่าย</span>
+            <img
+              src="assets/images/khao_mao_rang.jpg"
+              alt="เสิร์ฟคู่ชาร้อนยามบ่าย"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+              <span class="text-xs font-bold text-riceBrown px-3 text-center">เสิร์ฟคู่ชาร้อนยามบ่าย</span>
             </div>
           </div>
 
           <!-- Image 6 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
-            <div class="absolute inset-0 bg-[#E0D7C9] flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown">ครัวทำมือถูกสุขอนามัย</span>
+            <img
+              src="assets/images/crispy_khao_mao.jpg"
+              alt="ครัวทำมือถูกสุขอนามัย"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+              <span class="text-xs font-bold text-riceBrown px-3 text-center">ครัวทำมือถูกสุขอนามัย</span>
             </div>
           </div>
 
@@ -764,6 +804,14 @@
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
                   <span>ส่งแยกรายที่อยู่คู่ค้าได้ทั่วประเทศ</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-gold">✔</span>
+                  <span>รองรับจำนวนสั่งซื้อตั้งแต่ 30–5,000 ชุดขึ้นไป</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-gold">✔</span>
+                  <span>มีทีมดูแลองค์กรโดยเฉพาะ ตั้งแต่ดีไซน์จนวันส่งมอบ</span>
                 </div>
               </div>
             </div>
