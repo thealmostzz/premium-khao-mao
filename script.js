@@ -143,23 +143,26 @@ function renderProducts() {
     const imgWrapper = document.createElement("div");
     imgWrapper.className = "w-full h-48 mb-4 bg-[#F1E9DC] rounded-xl overflow-hidden relative flex items-center justify-center border border-beige";
     
-    // We create SVGs or dynamic placeholders for premium textures rather than using uncompressed images
-    const imgPlaceholder = document.createElement("div");
-    imgPlaceholder.className = "text-center p-4";
-    
-    const svgIcon = document.createElement("div");
-    svgIcon.className = "text-riceGreen text-4xl mb-2";
-    svgIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707M17.636 17.636l-.707-.707M6.364 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>`;
-    
-    const imgLabel = document.createElement("span");
-    imgLabel.className = "text-xs font-semibold text-riceBrown tracking-wider uppercase";
-    imgLabel.textContent = product.name;
-    
-    imgPlaceholder.appendChild(svgIcon);
-    imgPlaceholder.appendChild(imgLabel);
-    imgWrapper.appendChild(imgPlaceholder);
+    // Product image from assets
+    const productImg = document.createElement("img");
+    productImg.src = `assets/images/${product.image}.jpg`;
+    productImg.alt = product.name;
+    productImg.className = "w-full h-full object-cover";
+    productImg.loading = "lazy";
+
+    // Fallback to placeholder SVG if image fails to load
+    productImg.onerror = function() {
+      this.style.display = "none";
+      const fallback = document.createElement("div");
+      fallback.className = "text-center p-4";
+      fallback.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-riceBrown" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707M17.636 17.636l-.707-.707M6.364 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span class="text-xs font-semibold text-riceBrown tracking-wider uppercase block mt-2">${product.name}</span>`;
+      imgWrapper.appendChild(fallback);
+    };
+
+    imgWrapper.appendChild(productImg);
     card.appendChild(imgWrapper);
 
     if (product.badge) {
