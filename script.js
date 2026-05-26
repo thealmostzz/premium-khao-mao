@@ -6,6 +6,9 @@
 // เปลี่ยนเป็น false ก่อน deploy ไป production เพื่อซ่อน debug toast
 const IS_DEV_MODE = false;
 
+// Ensure dataLayer exists so analytics events can queue even before GTM loads
+window.dataLayer = window.dataLayer || [];
+
 // --- Mock Data ---
 const PRODUCTS = [
   {
@@ -155,10 +158,16 @@ function renderProducts() {
       this.style.display = "none";
       const fallback = document.createElement("div");
       fallback.className = "text-center p-4";
+
+      // Render a static SVG only; set product name via textContent to avoid XSS injection.
       fallback.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-riceBrown" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707M17.636 17.636l-.707-.707M6.364 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-      <span class="text-xs font-semibold text-riceBrown tracking-wider uppercase block mt-2">${product.name}</span>`;
+      </svg>`;
+
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "text-xs font-semibold text-riceBrown tracking-wider uppercase block mt-2";
+      nameSpan.textContent = product.name;
+      fallback.appendChild(nameSpan);
       imgWrapper.appendChild(fallback);
     };
 
@@ -538,20 +547,47 @@ function showToastNotification(eventName, eventParams) {
   // Create individual toast element safely
   const toast = document.createElement("div");
   toast.className = "bg-leaf/95 text-ivory border border-gold p-4 rounded-xl shadow-xl flex items-center space-x-3 pointer-events-auto transform translate-x-96 transition-transform duration-300 ease-out max-w-sm";
-  
-  // Custom checkmark SVG
-  toast.innerHTML = `
-    <div class="bg-gold text-leaf p-1.5 rounded-full shrink-0">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-      </svg>
-    </div>
-    <div>
-      <h5 class="text-xs font-semibold uppercase tracking-wider text-gold">Analytics Event Fired</h5>
-      <p class="text-sm font-bold font-serifThai">${eventLabel}</p>
-      <p class="text-[10px] text-ivory/80 mt-0.5">${paramDescription}</p>
-    </div>
-  `;
+
+  // Custom checkmark SVG + text (use textContent to avoid XSS)
+  const svgNS = "http://www.w3.org/2000/svg";
+  const iconWrap = document.createElement("div");
+  iconWrap.className = "bg-gold text-leaf p-1.5 rounded-full shrink-0";
+
+  const checkSvg = document.createElementNS(svgNS, "svg");
+  checkSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  checkSvg.setAttribute("class", "h-4 w-4");
+  checkSvg.setAttribute("fill", "none");
+  checkSvg.setAttribute("viewBox", "0 0 24 24");
+  checkSvg.setAttribute("stroke", "currentColor");
+  checkSvg.setAttribute("stroke-width", "3");
+
+  const checkPath = document.createElementNS(svgNS, "path");
+  checkPath.setAttribute("stroke-linecap", "round");
+  checkPath.setAttribute("stroke-linejoin", "round");
+  checkPath.setAttribute("d", "M5 13l4 4L19 7");
+
+  checkSvg.appendChild(checkPath);
+  iconWrap.appendChild(checkSvg);
+
+  const textWrap = document.createElement("div");
+  const title = document.createElement("h5");
+  title.className = "text-xs font-semibold uppercase tracking-wider text-gold";
+  title.textContent = "Analytics Event Fired";
+
+  const labelP = document.createElement("p");
+  labelP.className = "text-sm font-bold font-serifThai";
+  labelP.textContent = eventLabel;
+
+  const paramP = document.createElement("p");
+  paramP.className = "text-[10px] text-ivory/80 mt-0.5";
+  paramP.textContent = paramDescription;
+
+  textWrap.appendChild(title);
+  textWrap.appendChild(labelP);
+  textWrap.appendChild(paramP);
+
+  toast.appendChild(iconWrap);
+  toast.appendChild(textWrap);
 
   container.appendChild(toast);
   
