@@ -9,115 +9,218 @@ const IS_DEV_MODE = false;
 // Ensure dataLayer exists so analytics events can queue even before GTM loads
 window.dataLayer = window.dataLayer || [];
 
-// --- Mock Data ---
-const PRODUCTS = [
-  {
-    id: "khao-mao-kluk",
-    name: "ข้าวเม่าคลุกมะพร้าวอ่อนน้ำหอม",
-    category: "Signature Menu",
-    badge: "Signature",
-    description: "ข้าวเม่าหอมระมุน คลุกมะพร้าวอ่อนน้ำหอมขูดเส้นหนานุ่มอย่างพิถีพิถัน รสชาติไทยแท้แบบดั้งเดิม หวานน้อยกลมกล่อม",
-    priceText: "เริ่มต้น 120.- / กล่อง",
-    image: "khao_mao_kluk", // Image asset reference
-    ctaText: "สั่งซื้อเมนูนี้"
+const LOCALIZED_CONTENT = {
+  th: {
+    products: [
+      {
+        id: "khao-mao-kluk",
+        name: "ข้าวเม่าคลุกมะพร้าวอ่อนน้ำหอม",
+        badge: "Signature",
+        description: "ข้าวเม่าหอมระมุน คลุกมะพร้าวอ่อนน้ำหอมขูดเส้นหนานุ่มอย่างพิถีพิถัน รสชาติไทยแท้แบบดั้งเดิม หวานน้อยกลมกล่อม",
+        priceText: "เริ่มต้น 120.- / กล่อง",
+        image: "khao_mao_kluk",
+        ctaText: "สั่งซื้อเมนูนี้"
+      },
+      {
+        id: "khao-mao-tod",
+        name: "ข้าวเม่าทอดสูตรชาววังโบราณ",
+        badge: "Best Seller",
+        description: "กล้วยไข่สุกหวานกำลังดี ห่อหุ้มแป้งข้าวเม่าปรุงสูตรพิเศษ ทอดจนสีเหลืองตองอ่อนกรอบฟู ไม่อมน้ำมัน",
+        priceText: "เริ่มต้น 150.- / กล่อง (4 ชิ้น)",
+        image: "khao_mao_tod",
+        ctaText: "สั่งซื้อเมนูนี้"
+      },
+      {
+        id: "khao-mao-rang",
+        name: "ข้าวเม่ารางหอมกรุ่นอบควันเทียน",
+        badge: "Traditional",
+        description: "ข้าวเม่าคั่วโบราณคัดพิเศษ นำไปอบควันเทียนสูตรลับจนหอมฟุ้ง ทานคู่กับมะพร้าวขูดและน้ำตาลทรายนวลใจ",
+        priceText: "เริ่มต้น 135.- / ชุด",
+        image: "khao_mao_rang",
+        ctaText: "สั่งซื้อเมนูนี้"
+      },
+      {
+        id: "crispy-khao-mao",
+        name: "ข้าวเม่าอบกรอบปรุงรสพิเศษ (สูตรคลีน)",
+        badge: "New Item",
+        description: "ข้าวเม่าคัดอ่อนผ่านกรรมวิธีอบกรอบ 100% ไร้น้ำมัน เหมาะสำหรับคนรักสุขภาพ ทานเล่นเพลินไม่มีเบื่อ",
+        priceText: "เริ่มต้น 89.- / ซอง",
+        image: "crispy_khao_mao",
+        ctaText: "สั่งซื้อเมนูนี้"
+      },
+      {
+        id: "premium-gift-set",
+        name: "Premium Wooden Gift Set",
+        badge: "Premium Gift",
+        description: "ชุดของฝากข้าวเม่าในแพ็กเกจกล่องไม้สักขัดเรียบหรู คาดริบบิ้นทองคำทองทอ พร้อมชาสมุนไพรออร์แกนิกในชุด",
+        priceText: "เริ่มต้น 890.- / เซ็ต",
+        image: "premium_gift_set",
+        ctaText: "ดูชุดของฝาก"
+      },
+      {
+        id: "corporate-gift-box",
+        name: "Corporate Premium Gift Box",
+        badge: "B2B Special",
+        description: "บริการจัดทำเซ็ตของขวัญองค์กร ปริมาณมาก ออกแบบปั๊มฟอยล์โลโก้แบรนด์ของคุณ คลุมโทนโบว์สีสุภาพสากลสำหรับคู่ค้าและพนักงาน",
+        priceText: "ราคาพิเศษรายออเดอร์",
+        image: "corporate_gift_box",
+        ctaText: "ติดต่อสอบถามแพ็กเกจ"
+      }
+    ],
+    reviews: [
+      {
+        name: "คุณวิภาวรรณ สุขุมวิท",
+        role: "ลูกค้าประจำ (สั่งซื้อไปทานคู่ชาบ่าย)",
+        stars: 5,
+        text: "ประทับใจความหอมละมุนของข้าวเม่าคลุกมะพร้าวอ่อนน้ำหอมมากค่ะ รสสัมผัสเหนียวนุ่ม มีความหอมเป็นเอกลักษณ์เฉพาะตัว ไม่หวานเลี่ยนจนเกินไป ซื้อทานเองและสั่งให้คุณพ่อคุณแม่ทานบ่อยมากค่ะ แพ็กเกจสะอาด เรียบร้อยดีมากค่ะ"
+      },
+      {
+        name: "คุณธนภัทร เลิศวรุตม์",
+        role: "ผู้จัดซื้อจัดจ้าง บริษัทอสังหาริมทรัพย์ระดับประเทศ",
+        stars: 5,
+        text: "ได้ทำการสั่งชุดของฝาก Corporate Premium Gift Set จำนวน 250 ชุด เพื่อแจกพนักงานและคู่ค้าทางธุรกิจในช่วงปีใหม่ ทุกคนชมเป็นเสียงเดียวกันว่าขนมรสชาติประณีตมาก กล่องไม้สลักลายโลโก้แบรนด์ดูแพงและเรียบหรู เหมาะสมกับเป็นของขวัญระดับพรีเมียมอย่างยิ่งครับ"
+      },
+      {
+        name: "คุณกมลวรรณ เด่นไทย",
+        role: "ลูกค้าซื้อของฝาก (กทม.)",
+        stars: 5,
+        text: "ปกติข้าวเม่าจะหาอร่อยและสะอาดได้ยากมากค่ะ แต่ร้านนี้ตำสดใหม่จริงๆ บรรจุภัณฑ์สุญญากาศมาอย่างดี ส่งมาถึงกรุงเทพฯ ข้าวเม่ายังคงความหอมสด สัมผัสนุ่มเด้งเหมือนทานสดที่หน้าร้านเลยค่ะ ยินดีบอกต่อเพื่อนๆ แน่นอนค่ะ"
+      }
+    ],
+    faqs: [
+      {
+        question: "ข้าวเม่าของทางร้านสามารถเก็บไว้ได้นานกี่วัน?",
+        answer: "ข้าวเม่าคลุกสดบรรจุระบบสุญญากาศ เมื่อเก็บในตู้เย็นช่องปกติจะอยู่ได้ประมาณ 3-5 วัน และหากแช่แข็งในช่องฟรีซจะเก็บได้นานถึง 1 เดือนค่ะ แนะนำให้เปิดทานทันทีเมื่อเปิดบรรจุภัณฑ์เพื่อลิ้มรสสัมผัสที่ดีที่สุด ส่วนข้าวเม่าอบกรอบจะเก็บในอุณหภูมิห้องได้นาน 3 เดือนโดยไม่ต้องแช่เย็นค่ะ"
+      },
+      {
+        question: "ถ้าต้องการซื้อเป็นของฝากต่างจังหวัด มีบริการขนส่งอย่างไร?",
+        answer: "ทางร้านบริการจัดส่งด้วยระบบขนส่งควบคุมอุณหภูมิแช่เย็น (Cool Express) ทั่วประเทศค่ะ ขนมจึงรักษาความสดใหม่และเย็นไปจนถึงมือผู้รับอย่างแน่นอน โดยคิดค่าบริการจัดส่งเหมาจ่ายตามจริง หรือส่งฟรีทันทีเมื่อมียอดสั่งซื้อครบ 1,200 บาทขึ้นไปค่ะ"
+      },
+      {
+        question: "ต้องทำการสั่งออเดอร์ล่วงหน้าก่อนกี่วัน?",
+        answer: "สำหรับเมนูทั่วไป สั่งซื้อก่อน 12.00 น. จัดส่งในวันถัดไปได้ทันทีค่ะ ส่วนของขวัญพรีเมียม (Premium Gift Set) แนะนำสั่งล่วงหน้า 1-2 วัน และหากเป็นออเดอร์องค์กรจำนวนมาก (Corporate Order) แนะนำติดต่อล่วงหน้า 5-7 วันทำการเพื่อทางร้านจะจัดทำแพ็กเกจจิ้งปั๊มโลโก้และคัดเลือกรวงข้าวที่ดีที่สุดอย่างประณีตค่ะ"
+      },
+      {
+        question: "มีแพ็กเกจจัดทำพิเศษสำหรับกลุ่มลูกค้าองค์กร (B2B) หรือไม่?",
+        answer: "มีบริการเต็มรูปแบบค่ะ ทางร้านรับออกแบบสายคาด ปั๊มฟอยล์เงิน/ทอง บนกล่องไม้สัก การ์ดอวยพรตราบริษัท รวมถึงบริการคัดจัดเซ็ตพิเศษตามงบประมาณขององค์กร สามารถติดต่อแจ้งรายละเอียดฝ่ายขาย B2B หรือทัก LINE เพื่อขอใบเสนอราคาอย่างเป็นทางการได้ทันทีค่ะ"
+      },
+      {
+        question: "มีหน้าร้านให้เข้าไปเลือกซื้อสินค้าเองหรือไม่?",
+        answer: "ทางร้านมีครัวแฮนด์คราฟต์หน้าร้านหลักตั้งอยู่ที่จังหวัดนครราชสีมา ลูกค้าสามารถแวะเข้ามาทานสดๆ หรือมารับสินค้าได้ด้วยตนเองค่ะ เพื่อความสะดวกสูงสุด แนะนำทักแชทสั่งจองล่วงหน้าเพื่อจองคิวจัดทำไว้ก่อน จะได้ทานข้าวเม่าที่ทำสดขึ้นจากเตาร้อนๆ พอดีเวลาค่ะ"
+      }
+    ]
   },
-  {
-    id: "khao-mao-tod",
-    name: "ข้าวเม่าทอดสูตรชาววังโบราณ",
-    category: "Signature Menu",
-    badge: "Best Seller",
-    description: "กล้วยไข่สุกหวานกำลังดี ห่อหุ้มแป้งข้าวเม่าปรุงสูตรพิเศษ ทอดจนสีเหลืองตองอ่อนกรอบฟู ไม่อมน้ำมัน",
-    priceText: "เริ่มต้น 150.- / กล่อง (4 ชิ้น)",
-    image: "khao_mao_tod",
-    ctaText: "สั่งซื้อเมนูนี้"
-  },
-  {
-    id: "khao-mao-rang",
-    name: "ข้าวเม่ารางหอมกรุ่นอบควันเทียน",
-    category: "Signature Menu",
-    badge: "Traditional",
-    description: "ข้าวเม่าคั่วโบราณคัดพิเศษ นำไปอบควันเทียนสูตรลับจนหอมฟุ้ง ทานคู่กับมะพร้าวขูดและน้ำตาลทรายนวลใจ",
-    priceText: "เริ่มต้น 135.- / ชุด",
-    image: "khao_mao_rang",
-    ctaText: "สั่งซื้อเมนูนี้"
-  },
-  {
-    id: "crispy-khao-mao",
-    name: "ข้าวเม่าอบกรอบปรุงรสพิเศษ (สูตรคลีน)",
-    category: "Snack",
-    badge: "New Item",
-    description: "ข้าวเม่าคัดอ่อนผ่านกรรมวิธีอบกรอบ 100% ไร้น้ำมัน เหมาะสำหรับคนรักสุขภาพ ทานเล่นเพลินไม่มีเบื่อ",
-    priceText: "เริ่มต้น 89.- / ซอง",
-    image: "crispy_khao_mao",
-    ctaText: "สั่งซื้อเมนูนี้"
-  },
-  {
-    id: "premium-gift-set",
-    name: "Premium Wooden Gift Set",
-    category: "Gift Set",
-    badge: "Premium Gift",
-    description: "ชุดของฝากข้าวเม่าในแพ็กเกจกล่องไม้สักขัดเรียบหรู คาดริบบิ้นทองคำทองทอ พร้อมชาสมุนไพรออร์แกนิกในชุด",
-    priceText: "เริ่มต้น 890.- / เซ็ต",
-    image: "premium_gift_set",
-    ctaText: "ดูชุดของฝาก"
-  },
-  {
-    id: "corporate-gift-box",
-    name: "Corporate Premium Gift Box",
-    category: "Corporate",
-    badge: "B2B Special",
-    description: "บริการจัดทำเซ็ตของขวัญองค์กร ปริมาณมาก ออกแบบปั๊มฟอยล์โลโก้แบรนด์ของคุณ คลุมโทนโบว์สีสุภาพสากลสำหรับคู่ค้าและพนักงาน",
-    priceText: "ราคาพิเศษรายออเดอร์",
-    image: "corporate_gift_box",
-    ctaText: "ติดต่อสอบถามแพ็กเกจ"
+  en: {
+    products: [
+      {
+        id: "khao-mao-kluk",
+        name: "Aromatic Young Coconut Khao Mao",
+        badge: "Signature",
+        description: "Soft hand-pounded khao mao tossed with fragrant young coconut for a classic Thai flavor that is delicate, mellow, and lightly sweet.",
+        priceText: "Starting at THB 120 / box",
+        image: "khao_mao_kluk",
+        ctaText: "Order This Item"
+      },
+      {
+        id: "khao-mao-tod",
+        name: "Royal-Style Fried Khao Mao",
+        badge: "Best Seller",
+        description: "Sweet ripe bananas wrapped in seasoned khao mao batter and fried until light, crisp, and golden without excess oil.",
+        priceText: "Starting at THB 150 / box (4 pieces)",
+        image: "khao_mao_tod",
+        ctaText: "Order This Item"
+      },
+      {
+        id: "khao-mao-rang",
+        name: "Candle-Smoked Roasted Khao Mao",
+        badge: "Traditional",
+        description: "Premium roasted khao mao gently scented with candle smoke and served with shredded coconut and fine sugar.",
+        priceText: "Starting at THB 135 / set",
+        image: "khao_mao_rang",
+        ctaText: "Order This Item"
+      },
+      {
+        id: "crispy-khao-mao",
+        name: "Crispy Seasoned Khao Mao",
+        badge: "New Item",
+        description: "A clean-label crunchy snack made from tender khao mao, oven-baked without oil for lighter everyday snacking.",
+        priceText: "Starting at THB 89 / pack",
+        image: "crispy_khao_mao",
+        ctaText: "Order This Item"
+      },
+      {
+        id: "premium-gift-set",
+        name: "Premium Wooden Gift Set",
+        badge: "Premium Gift",
+        description: "An elegant teak presentation box filled with signature khao mao and paired with organic herbal tea for refined gifting.",
+        priceText: "Starting at THB 890 / set",
+        image: "premium_gift_set",
+        ctaText: "View Gift Set"
+      },
+      {
+        id: "corporate-gift-box",
+        name: "Corporate Premium Gift Box",
+        badge: "B2B Special",
+        description: "Custom large-volume corporate gift boxes with foil logo finishing, coordinated ribbon colors, and premium presentation for partners and teams.",
+        priceText: "Custom quote available",
+        image: "corporate_gift_box",
+        ctaText: "Request Package Details"
+      }
+    ],
+    reviews: [
+      {
+        name: "Wipawan Sukhumvit",
+        role: "Returning customer",
+        stars: 5,
+        text: "I love how fragrant and soft the young coconut khao mao is. It feels refined, not overly sweet, and the packaging arrives clean and beautifully prepared every time."
+      },
+      {
+        name: "Thanapat Lertwarut",
+        role: "Corporate procurement manager",
+        stars: 5,
+        text: "We ordered 250 corporate premium gift sets for New Year gifting. The team loved the craftsmanship, and the engraved wooden box looked elegant and premium."
+      },
+      {
+        name: "Kamonwan Denthai",
+        role: "Gift buyer in Bangkok",
+        stars: 5,
+        text: "It is hard to find khao mao that is both delicious and hygienic, but this shop delivers exactly that. It arrived in Bangkok fresh, aromatic, and pleasantly soft."
+      }
+    ],
+    faqs: [
+      {
+        question: "How long can your khao mao be stored?",
+        answer: "Fresh mixed khao mao in vacuum packaging keeps for about 3 to 5 days in the refrigerator and up to 1 month in the freezer. Crispy khao mao can be stored at room temperature for up to 3 months."
+      },
+      {
+        question: "Do you offer delivery for gifts outside the province?",
+        answer: "Yes. We ship nationwide with chilled temperature-controlled delivery to keep the dessert fresh until it reaches the recipient. Shipping is charged at cost, or free for orders over THB 1,200."
+      },
+      {
+        question: "How many days in advance should I place an order?",
+        answer: "For regular menu items, orders placed before noon can usually be shipped the next day. Premium gift sets are best ordered 1 to 2 days ahead, while large corporate orders should be discussed 5 to 7 business days in advance."
+      },
+      {
+        question: "Do you offer tailored packages for B2B clients?",
+        answer: "Yes. We provide full-service corporate gifting, including belly bands, gold or silver foil stamping, branded greeting cards, and curated assortments based on your budget."
+      },
+      {
+        question: "Do you have a physical storefront?",
+        answer: "Yes. Our main handcrafted kitchen is in Nakhon Ratchasima. Customers are welcome to visit for pickup or to enjoy freshly made khao mao, though pre-ordering is recommended."
+      }
+    ]
   }
-];
+};
 
-const REVIEWS = [
-  {
-    name: "คุณวิภาวรรณ สุขุมวิท",
-    role: "ลูกค้าประจำ (สั่งซื้อไปทานคู่ชาบ่าย)",
-    stars: 5,
-    text: "ประทับใจความหอมละมุนของข้าวเม่าคลุกมะพร้าวอ่อนน้ำหอมมากค่ะ รสสัมผัสเหนียวนุ่ม มีความหอมเป็นเอกลักษณ์เฉพาะตัว ไม่หวานเลี่ยนจนเกินไป ซื้อทานเองและสั่งให้คุณพ่อคุณแม่ทานบ่อยมากค่ะ แพ็กเกจสะอาด เรียบร้อยดีมากค่ะ"
-  },
-  {
-    name: "คุณธนภัทร เลิศวรุตม์",
-    role: "ผู้จัดซื้อจัดจ้าง บริษัทอสังหาริมทรัพย์ระดับประเทศ",
-    stars: 5,
-    text: "ได้ทำการสั่งชุดของฝาก Corporate Premium Gift Set จำนวน 250 ชุด เพื่อแจกพนักงานและคู่ค้าทางธุรกิจในช่วงปีใหม่ ทุกคนชมเป็นเสียงเดียวกันว่าขนมรสชาติประณีตมาก กล่องไม้สลักลายโลโก้แบรนด์ดูแพงและเรียบหรู เหมาะสมกับเป็นของขวัญระดับพรีเมียมอย่างยิ่งครับ"
-  },
-  {
-    name: "คุณกมลวรรณ เด่นไทย",
-    role: "ลูกค้าซื้อของฝาก (กทม.)",
-    stars: 5,
-    text: "ปกติข้าวเม่าจะหาอร่อยและสะอาดได้ยากมากค่ะ แต่ร้านนี้ตำสดใหม่จริงๆ บรรจุภัณฑ์สุญญากาศมาอย่างดี ส่งมาถึงกรุงเทพฯ ข้าวเม่ายังคงความหอมสด สัมผัสนุ่มเด้งเหมือนทานสดที่หน้าร้านเลยค่ะ ยินดีบอกต่อเพื่อนๆ แน่นอนค่ะ"
-  }
-];
+function getCurrentLang() {
+  return typeof window.getCurrentLanguage === "function" ? window.getCurrentLanguage() : "th";
+}
 
-const FAQS = [
-  {
-    question: "ข้าวเม่าของทางร้านสามารถเก็บไว้ได้นานกี่วัน?",
-    answer: "ข้าวเม่าคลุกสดบรรจุระบบสุญญากาศ เมื่อเก็บในตู้เย็นช่องปกติจะอยู่ได้ประมาณ 3-5 วัน และหากแช่แข็งในช่องฟรีซจะเก็บได้นานถึง 1 เดือนค่ะ แนะนำให้เปิดทานทันทีเมื่อเปิดบรรจุภัณฑ์เพื่อลิ้มรสสัมผัสที่ดีที่สุด ส่วนข้าวเม่าอบกรอบจะเก็บในอุณหภูมิห้องได้นาน 3 เดือนโดยไม่ต้องแช่เย็นค่ะ"
-  },
-  {
-    question: "ถ้าต้องการซื้อเป็นของฝากต่างจังหวัด มีบริการขนส่งอย่างไร?",
-    answer: "ทางร้านบริการจัดส่งด้วยระบบขนส่งควบคุมอุณหภูมิแช่เย็น (Cool Express) ทั่วประเทศค่ะ ขนมจึงรักษาความสดใหม่และเย็นไปจนถึงมือผู้รับอย่างแน่นอน โดยคิดค่าบริการจัดส่งเหมาจ่ายตามจริง หรือส่งฟรีทันทีเมื่อมียอดสั่งซื้อครบ 1,200 บาทขึ้นไปค่ะ"
-  },
-  {
-    question: "ต้องทำการสั่งออเดอร์ล่วงหน้าก่อนกี่วัน?",
-    answer: "สำหรับเมนูทั่วไป สั่งซื้อก่อน 12.00 น. จัดส่งในวันถัดไปได้ทันทีค่ะ ส่วนของขวัญพรีเมียม (Premium Gift Set) แนะนำสั่งล่วงหน้า 1-2 วัน และหากเป็นออเดอร์องค์กรจำนวนมาก (Corporate Order) แนะนำติดต่อล่วงหน้า 5-7 วันทำการเพื่อทางร้านจะจัดทำแพ็กเกจจิ้งปั๊มโลโก้และคัดเลือกรวงข้าวที่ดีที่สุดอย่างประณีตค่ะ"
-  },
-  {
-    question: "มีแพ็กเกจจัดทำพิเศษสำหรับกลุ่มลูกค้าองค์กร (B2B) หรือไม่?",
-    answer: "มีบริการเต็มรูปแบบค่ะ ทางร้านรับออกแบบสายคาด ปั๊มฟอยล์เงิน/ทอง บนกล่องไม้สัก การ์ดอวยพรตราบริษัท รวมถึงบริการคัดจัดเซ็ตพิเศษตามงบประมาณขององค์กร สามารถติดต่อแจ้งรายละเอียดฝ่ายขาย B2B หรือทัก LINE เพื่อขอใบเสนอราคาอย่างเป็นทางการได้ทันทีค่ะ"
-  },
-  {
-    question: "มีหน้าร้านให้เข้าไปเลือกซื้อสินค้าเองหรือไม่?",
-    answer: "ทางร้านมีครัวแฮนด์คราฟต์หน้าร้านหลักตั้งอยู่ที่จังหวัดนครราชสีมา ลูกค้าสามารถแวะเข้ามาทานสดๆ หรือมารับสินค้าได้ด้วยตนเองค่ะ เพื่อความสะดวกสูงสุด แนะนำทักแชทสั่งจองล่วงหน้าเพื่อจองคิวจัดทำไว้ก่อน จะได้ทานข้าวเม่าที่ทำสดขึ้นจากเตาร้อนๆ พอดีเวลาค่ะ"
-  }
-];
+function getLocalizedContent(key) {
+  const lang = getCurrentLang();
+  return LOCALIZED_CONTENT[lang]?.[key] ?? LOCALIZED_CONTENT.th[key];
+}
 
-// --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   renderReviews();
@@ -127,14 +230,22 @@ document.addEventListener("DOMContentLoaded", () => {
   initReviewsCarousel();
 });
 
+window.addEventListener("languagechange", () => {
+  currentSlide = 0;
+  renderProducts();
+  renderReviews();
+  renderFAQs();
+});
+
 // --- Dynamic Rendering with Strict XSS Protection ---
 function renderProducts() {
   const container = document.getElementById("product-grid");
   if (!container) return;
+  const products = getLocalizedContent("products");
 
   container.innerHTML = ""; // Clear existing placeholder content safely
 
-  PRODUCTS.forEach(product => {
+  products.forEach(product => {
     // Generate secure elements without innerHTML string interpolation from parameters
     const card = document.createElement("div");
     card.className = "card-hover-zoom rounded-2xl border border-beige bg-ivory p-6 shadow-sm flex flex-col justify-between premium-gold-border";
@@ -223,10 +334,11 @@ function renderProducts() {
 function renderReviews() {
   const container = document.getElementById("reviews-container");
   if (!container) return;
+  const reviews = getLocalizedContent("reviews");
 
   container.innerHTML = "";
 
-  REVIEWS.forEach((review, index) => {
+  reviews.forEach((review, index) => {
     const slide = document.createElement("div");
     slide.className = `min-w-full px-4 transition-opacity duration-500 ease-in-out ${index === 0 ? 'block' : 'hidden'}`;
     slide.setAttribute("data-slide-index", index);
@@ -277,10 +389,11 @@ function renderReviews() {
 function renderFAQs() {
   const container = document.getElementById("faq-accordion");
   if (!container) return;
+  const faqs = getLocalizedContent("faqs");
 
   container.innerHTML = "";
 
-  FAQS.forEach((faq, index) => {
+  faqs.forEach((faq, index) => {
     const item = document.createElement("div");
     item.className = "border-b border-beige py-4 reveal";
 
@@ -447,13 +560,15 @@ function initReviewsCarousel() {
   };
 
   prevBtn.addEventListener("click", () => {
-    currentSlide = (currentSlide - 1 + REVIEWS.length) % REVIEWS.length;
+    const totalReviews = getLocalizedContent("reviews").length;
+    currentSlide = (currentSlide - 1 + totalReviews) % totalReviews;
     updateSlidesVisibility();
     trackEvent("scroll_section", { carousel_action: "prev_review" });
   });
 
   nextBtn.addEventListener("click", () => {
-    currentSlide = (currentSlide + 1) % REVIEWS.length;
+    const totalReviews = getLocalizedContent("reviews").length;
+    currentSlide = (currentSlide + 1) % totalReviews;
     updateSlidesVisibility();
     trackEvent("scroll_section", { carousel_action: "next_review" });
   });

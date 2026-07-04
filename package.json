@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build:tailwind": "npx tailwindcss -i ./tailwind-input.css -o ./dist/tailwind.css --minify",
-    "watch:tailwind": "npx tailwindcss -i ./tailwind-input.css -o ./dist/tailwind.css --minify --watch"
+    "build:tailwind": "npx tailwindcss -i ./assets/css/source/tailwind-input.css -o ./assets/css/generated/tailwind.css --config ./config/tailwind.config.js --minify",
+    "watch:tailwind": "npx tailwindcss -i ./assets/css/source/tailwind-input.css -o ./assets/css/generated/tailwind.css --config ./config/tailwind.config.js --minify --watch"
   }
 }
 

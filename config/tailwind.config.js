@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // Scan templates + JS strings for class names
-  content: ["./index.html", "./script.js"],
+  content: ["./index.html", "./assets/js/**/*.js"],
   theme: {
     extend: {
       colors: {

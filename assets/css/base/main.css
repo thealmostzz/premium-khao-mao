@@ -88,6 +88,42 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(12px);
 }
 
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid rgba(139, 106, 69, 0.18);
+  border-radius: 9999px;
+  background: rgba(255, 253, 248, 0.92);
+  box-shadow: 0 10px 24px -18px rgba(33, 77, 56, 0.7);
+}
+
+.lang-switcher-mobile {
+  background: rgba(248, 241, 230, 0.92);
+}
+
+.lang-toggle-btn {
+  min-width: 2.5rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-rice-brown);
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.lang-toggle-btn:hover {
+  color: var(--color-leaf);
+}
+
+.lang-toggle-btn.is-active {
+  background: var(--color-leaf);
+  color: var(--color-ivory);
+  box-shadow: 0 8px 18px -14px rgba(33, 77, 56, 0.9);
+}
+
 /* Smooth Fade In Scroll classes */
 .reveal {
   opacity: 0;
