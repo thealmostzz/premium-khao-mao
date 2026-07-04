@@ -5,6 +5,7 @@
 // --- Dev Mode Flag ---
 // เปลี่ยนเป็น false ก่อน deploy ไป production เพื่อซ่อน debug toast
 const IS_DEV_MODE = false;
+const IMAGE_VERSION = "20260705-2";
 
 // Ensure dataLayer exists so analytics events can queue even before GTM loads
 window.dataLayer = window.dataLayer || [];
@@ -78,7 +79,7 @@ const LOCALIZED_CONTENT = {
         name: "คุณธนภัทร เลิศวรุตม์",
         role: "ผู้จัดซื้อจัดจ้าง บริษัทอสังหาริมทรัพย์ระดับประเทศ",
         stars: 5,
-        text: "ได้ทำการสั่งชุดของฝาก Corporate Premium Gift Set จำนวน 250 ชุด เพื่อแจกพนักงานและคู่ค้าทางธุรกิจในช่วงปีใหม่ ทุกคนชมเป็นเสียงเดียวกันว่าขนมรสชาติประณีตมาก กล่องไม้สลักลายโลโก้แบรนด์ดูแพงและเรียบหรู เหมาะสมกับเป็นของขวัญระดับพรีเมียมอย่างยิ่งครับ"
+        text: "ได้ทำการสั่งชุดของฝาก Corporate Premium Gift Set จำนวน 250 ชุด เพื่อแจกพนักงานและคู่ค้าทางธุรกิจในช่วงปีใหม่ ทุกคนชมเป็นเสียงเดียวกันว่าขนมรสชาติประณีตมาก กล่องไม้สลักลายโลโก้แบรนด์ดูแพงและเรียบหรู เหมาะสมกับเป็นของขวัญระดับพรีเมี่ยมอย่างยิ่งครับ"
       },
       {
         name: "คุณกมลวรรณ เด่นไทย",
@@ -98,7 +99,7 @@ const LOCALIZED_CONTENT = {
       },
       {
         question: "ต้องทำการสั่งออเดอร์ล่วงหน้าก่อนกี่วัน?",
-        answer: "สำหรับเมนูทั่วไป สั่งซื้อก่อน 12.00 น. จัดส่งในวันถัดไปได้ทันทีค่ะ ส่วนของขวัญพรีเมียม (Premium Gift Set) แนะนำสั่งล่วงหน้า 1-2 วัน และหากเป็นออเดอร์องค์กรจำนวนมาก (Corporate Order) แนะนำติดต่อล่วงหน้า 5-7 วันทำการเพื่อทางร้านจะจัดทำแพ็กเกจจิ้งปั๊มโลโก้และคัดเลือกรวงข้าวที่ดีที่สุดอย่างประณีตค่ะ"
+        answer: "สำหรับเมนูทั่วไป สั่งซื้อก่อน 12.00 น. จัดส่งในวันถัดไปได้ทันทีค่ะ ส่วนของขวัญพรีเมี่ยม (Premium Gift Set) แนะนำสั่งล่วงหน้า 1-2 วัน และหากเป็นออเดอร์องค์กรจำนวนมาก (Corporate Order) แนะนำติดต่อล่วงหน้า 5-7 วันทำการเพื่อทางร้านจะจัดทำแพ็กเกจจิ้งปั๊มโลโก้และคัดเลือกรวงข้าวที่ดีที่สุดอย่างประณีตค่ะ"
       },
       {
         question: "มีแพ็กเกจจัดทำพิเศษสำหรับกลุ่มลูกค้าองค์กร (B2B) หรือไม่?",
@@ -283,7 +284,7 @@ function renderProducts() {
     
     // Product image from assets
     const productImg = document.createElement("img");
-    productImg.src = `assets/images/${product.image}.jpg`;
+    productImg.src = `assets/images/${product.image}.jpg?v=${IMAGE_VERSION}`;
     productImg.alt = product.name;
     productImg.className = "w-full h-full object-cover";
     productImg.loading = "lazy";
