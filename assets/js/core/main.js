@@ -345,7 +345,7 @@ function renderProducts() {
     ctaBtn.addEventListener("click", () => {
       trackEvent("click_product_cta", { product_id: product.id, product_name: product.name });
       // Redirect to LINE (simulated)
-      window.open("https://line.me", "_blank", "noopener,noreferrer");
+      window.open("https://line.me/ti/p/~peeradet22", "_blank", "noopener,noreferrer");
     });
     
     footerDiv.appendChild(ctaBtn);
