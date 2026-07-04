@@ -150,6 +150,7 @@ const textTranslations = {
     footer_privacy_link: "นโยบายความเป็นส่วนตัว",
     footer_terms_link: "เงื่อนไขการสั่งสินค้า",
     back_to_top_label: "กลับขึ้นด้านบน",
+    legal_back_home: "กลับหน้าแรก",
     legal_eyebrow: "Privacy & Terms",
     legal_title: "นโยบายและเงื่อนไขสำคัญก่อนสั่งซื้อ",
     legal_desc: "ข้อมูลด้านล่างสรุปวิธีที่เราใช้ข้อมูลลูกค้าและเงื่อนไขการสั่งซื้อเบื้องต้นสำหรับการยืนยันออเดอร์ การจัดส่ง และการดูแลหลังการขายอย่างโปร่งใส",
@@ -322,6 +323,7 @@ const textTranslations = {
     footer_privacy_link: "Privacy Policy",
     footer_terms_link: "Order Terms",
     back_to_top_label: "Back to top",
+    legal_back_home: "Back to Home",
     legal_eyebrow: "Privacy & Terms",
     legal_title: "Important Privacy and Ordering Terms",
     legal_desc: "The details below summarize how we use customer information and the key order terms used for order confirmation, delivery, and after-sales support.",
@@ -355,7 +357,7 @@ const htmlTranslations = {
     social_desc: "แชร์ช่วงเวลาของคุณพร้อมข้าวเม่าพรีเมี่ยม แท็ก <span class=\"text-leaf font-bold\">#KhaoMaoPremium</span> เพื่อลุ้นรับของรางวัลพิเศษ",
     corporate_title: "ชุดของฝากข้าวเม่า <br><span class=\"premium-gold-text\">สำหรับลูกค้าองค์กรธุรกิจ</span>",
     final_cta_title: "ลิ้มลองรสชาติข้าวเม่าเกรดพรีเมี่ยม <br><span class=\"premium-gold-text\">ส่งต่อคุณค่าและความหอมสดใหม่</span>สู่โต๊ะอาหารคุณ",
-    cookie_desc: "เว็บไซต์นี้ใช้คุกกี้เพื่อพัฒนาประสบการณ์ใช้งานและวิเคราะห์สถิติ ตามมาตรฐาน <span class=\"text-gold font-semibold\">พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA)</span> คุณสามารถเลือกยอมรับหรือปฏิเสธการใช้คุกกี้ได้ <a href=\"#privacy-policy\" class=\"underline text-gold hover:text-white transition-colors ml-1\">อ่านนโยบายเพิ่มเติม</a>"
+    cookie_desc: "เว็บไซต์นี้ใช้คุกกี้เพื่อพัฒนาประสบการณ์ใช้งานและวิเคราะห์สถิติ ตามมาตรฐาน <span class=\"text-gold font-semibold\">พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA)</span> คุณสามารถเลือกยอมรับหรือปฏิเสธการใช้คุกกี้ได้ <a href=\"legal.html#privacy-policy\" class=\"underline text-gold hover:text-white transition-colors ml-1\">อ่านนโยบายเพิ่มเติม</a>"
   },
   en: {
     brand_name: "Premium <span class=\"premium-gold-text\">Khao Mao</span>",
@@ -366,7 +368,7 @@ const htmlTranslations = {
     social_desc: "Share your moments with Premium Khao Mao and tag <span class=\"text-leaf font-bold\">#KhaoMaoPremium</span> for a chance to receive special gifts.",
     corporate_title: "Premium khao mao gift sets <br><span class=\"premium-gold-text\">for corporate clients</span>",
     final_cta_title: "Experience premium Thai khao mao <br><span class=\"premium-gold-text\">and bring fresh fragrance and meaning</span> to your table",
-    cookie_desc: "This website uses cookies to improve the browsing experience and measure performance in line with <span class=\"text-gold font-semibold\">Thailand's Personal Data Protection Act (PDPA)</span>. You can accept or decline cookie usage at any time. <a href=\"#privacy-policy\" class=\"underline text-gold hover:text-white transition-colors ml-1\">Read more</a>"
+    cookie_desc: "This website uses cookies to improve the browsing experience and measure performance in line with <span class=\"text-gold font-semibold\">Thailand's Personal Data Protection Act (PDPA)</span>. You can accept or decline cookie usage at any time. <a href=\"legal.html#privacy-policy\" class=\"underline text-gold hover:text-white transition-colors ml-1\">Read more</a>"
   }
 };
 
