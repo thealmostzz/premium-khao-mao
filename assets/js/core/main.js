@@ -488,6 +488,9 @@ function initMobileMenu() {
 function initScrollEffects() {
   const reveals = document.querySelectorAll(".reveal");
   const stickyCta = document.getElementById("sticky-line-cta");
+  const backToTopBtn = document.getElementById("back-to-top");
+  const sections = Array.from(document.querySelectorAll("section[id]"));
+  const navLinks = Array.from(document.querySelectorAll("nav a"));
 
   // IntersectionObserver for beautiful scroll animations
   const observer = new IntersectionObserver((entries) => {
@@ -506,19 +509,27 @@ function initScrollEffects() {
     observer.observe(reveal);
   });
 
-  // Track window scroll to reveal sticky CTA after fold and update active header navigation
-  window.addEventListener("scroll", () => {
+  const handleScroll = () => {
     // Show/Hide Mobile Sticky CTA (After scrolling down 400px)
-    if (window.scrollY > 400) {
+    const isPastFold = window.scrollY > 400;
+
+    if (isPastFold) {
       if (stickyCta) stickyCta.classList.add("visible");
     } else {
       if (stickyCta) stickyCta.classList.remove("visible");
     }
 
-    // Scroll active link highlight logic
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll("nav a");
+    if (backToTopBtn) {
+      if (isPastFold) {
+        backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+        backToTopBtn.classList.add("opacity-100");
+      } else {
+        backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+        backToTopBtn.classList.remove("opacity-100");
+      }
+    }
 
+    // Scroll active link highlight logic
     let currentSectionId = "";
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 120; // Margin adjustment for sticky header
@@ -534,7 +545,10 @@ function initScrollEffects() {
         link.classList.add("text-leaf", "font-bold");
       }
     });
-  });
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 }
 
 // --- Customer Reviews Slider Logic ---
@@ -770,16 +784,6 @@ function initCounters() {
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      btn.classList.remove('opacity-0', 'pointer-events-none');
-      btn.classList.add('opacity-100');
-    } else {
-      btn.classList.add('opacity-0', 'pointer-events-none');
-      btn.classList.remove('opacity-100');
-    }
-  }, { passive: true });
 
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

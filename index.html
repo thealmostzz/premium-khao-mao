@@ -17,13 +17,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta id="meta-twitter-title" name="twitter:title" content="ข้าวเม่าไทยแท้ ของฝากพรีเมียม สั่งออนไลน์ได้สดใหม่ | ข้าวเม่าพรีเมียม">
   <meta id="meta-twitter-description" name="twitter:description" content="ข้าวเม่าไทยแท้เกรดพรีเมียม คั่วสดใหม่เตาดินฟืนธรรมชาติ ตำซ้อมมือประณีต คลุกมะพร้าวอ่อนน้ำหอม สั่งออนไลน์ส่งด่วนแช่เย็นทั่วไทย เหมาะเป็นของฝากและเซ็ตของขวัญองค์กร">
-  <meta name="twitter:image" content="https://www.premiumkhaomao.com/assets/images/hero-khao-mao.jpg">
+  <meta name="twitter:image" content="https://www.premiumkhaomao.com/assets/images/hero_khao_mao.png">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.premiumkhaomao.com/">
   <meta id="meta-og-title" property="og:title" content="ข้าวเม่าไทยแท้ ของฝากพรีเมียม สั่งออนไลน์ได้สดใหม่ | ข้าวเม่าพรีเมียม">
   <meta id="meta-og-description" property="og:description" content="ยกระดับรสชาติท้องถิ่นสู่ขนมไทยโบราณเกรดพรีเมียม คัดเกี่ยวมือสดใหม่ บรรจุระบบสุญญากาศจัดส่งควบคุมอุณหภูมิทั่วประเทศ">
-  <meta property="og:image" content="https://www.premiumkhaomao.com/assets/images/hero-khao-mao.jpg">
+  <meta property="og:image" content="https://www.premiumkhaomao.com/assets/images/hero_khao_mao.png">
 
   <!-- Google Fonts Pairing -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +67,7 @@
         "@type": "LocalBusiness",
         "@id": "https://www.premiumkhaomao.com/#store",
         "name": "ข้าวเม่าไทยแท้ ของฝากพรีเมียมร่วมสมัย",
-        "image": "https://www.premiumkhaomao.com/assets/images/hero-khao-mao.jpg",
+        "image": "https://www.premiumkhaomao.com/assets/images/hero_khao_mao.png",
         "priceRange": "$$",
         "telephone": "+66-88-888-8888",
         "address": {
@@ -113,7 +113,7 @@
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center space-x-2.5 focus:outline-none">
-        <span class="text-2xl sm:text-3xl text-leaf font-bold font-serifThai tracking-tight">ข้าวเม่า<span class="premium-gold-text">พรีเมียม</span></span>
+        <span class="text-2xl sm:text-3xl text-leaf font-bold font-serifThai tracking-tight" data-i18n-html="brand_name">ข้าวเม่า<span class="premium-gold-text">พรีเมียม</span></span>
       </a>
 
       <!-- Desktop Nav Menu -->
@@ -127,7 +127,7 @@
 
       <!-- Desktop Actions -->
       <div class="hidden md:flex items-center gap-3">
-        <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <div class="lang-switcher" role="group" aria-label="ตัวเลือกภาษา" data-i18n-attr="aria-label:lang_switcher_label">
           <button onclick="setLanguage('th')" data-lang="th" class="lang-toggle lang-toggle-btn">TH</button>
           <button onclick="setLanguage('en')" data-lang="en" class="lang-toggle lang-toggle-btn">EN</button>
         </div>
@@ -144,7 +144,7 @@
 
       <!-- Mobile Controls (Hamburger & Lang) -->
       <div class="flex items-center md:hidden space-x-4">
-        <div class="lang-switcher lang-switcher-mobile" role="group" aria-label="Language switcher">
+        <div class="lang-switcher lang-switcher-mobile" role="group" aria-label="ตัวเลือกภาษา" data-i18n-attr="aria-label:lang_switcher_label">
           <button onclick="setLanguage('th')" data-lang="th" class="lang-toggle lang-toggle-btn">TH</button>
           <button onclick="setLanguage('en')" data-lang="en" class="lang-toggle lang-toggle-btn">EN</button>
         </div>
@@ -202,7 +202,7 @@
             <span class="inline-flex items-center rounded-full bg-[#EBF0EC] border border-riceGreen/20 px-4 py-1 text-xs sm:text-sm font-bold text-leaf" data-i18n="hero_badge">
               🌾 รสชาติไทยแท้โบราณ คัดสรรพิเศษจากไร่
             </span>
-            <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal leading-[1.15] font-serifThai" data-i18n="hero_title">
+            <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal leading-[1.15] font-serifThai" data-i18n-html="hero_title">
               ข้าวเม่าไทยแท้ <br>
               <span class="premium-gold-text">ของฝากพรีเมียม</span>ร่วมสมัย
             </h1>
@@ -215,11 +215,11 @@
               <a href="https://line.me" target="_blank" rel="noopener noreferrer"
                  onclick="trackCtaClick('line', 'hero_primary')"
                  class="inline-flex items-center justify-center rounded-full bg-leaf px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-charcoal transition-all hover-scale border border-gold/30"
-                 data-i18n="hero_cta1">
+                 >
                 <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M24 10.3c0-4.2-4.1-7.7-9.2-7.7S5.6 6.1 5.6 10.3c0 3.8 3.3 6.9 7.7 7.6.3 0 .7.2.8.5l.2 1.3c.1.4 0 .8-.2.9-.2.2-.5.1-.9-.1l-1.6-1c-2-.6-3.8-1.9-5-3.5C2.6 13.9 1 11.2 1 8.2c0-4.8 5.1-8.7 11.4-8.7S23.8 3.4 23.8 8.2c0 1.2-.3 2.3-.9 3.3-.2.3-.1.7.2.9.2.2.6.1.8-.1.7-1.1 1.1-2.4 1.1-3.6z"/>
                 </svg>
-                ทัก LINE สั่งซื้อเลย
+                <span data-i18n="hero_cta1">ทัก LINE สั่งซื้อเลย</span>
               </a>
               <a href="#giftset"
                  onclick="trackEvent('click_gift_set_cta', { section: 'hero_secondary' })"
@@ -239,24 +239,24 @@
             <div class="relative w-full sm:w-[500px] h-[350px] sm:h-[450px] bg-ivory rounded-3xl border border-beige p-6 shadow-xl flex flex-col justify-between overflow-hidden premium-gold-border z-10 hover-scale">
               
               <!-- Premium gold label -->
-              <span class="absolute top-4 right-4 bg-gold text-leaf text-xs font-extrabold uppercase px-3 py-1 rounded-full z-20">
+              <span class="absolute top-4 right-4 bg-gold text-leaf text-xs font-extrabold uppercase px-3 py-1 rounded-full z-20" data-i18n="hero_badge_label">
                 100% Handcrafted
               </span>
 
               <!-- Hero product image -->
               <div class="w-full h-full rounded-2xl overflow-hidden relative border border-beige">
-                <img src="assets/images/hero_khao_mao.png" alt="ข้าวเม่าตำมือปรุงสดใหม่ พรีเมียม" class="w-full h-full object-cover" loading="eager">
+                <img src="assets/images/hero_khao_mao.png" alt="ข้าวเม่าตำมือปรุงสดใหม่ พรีเมียม" data-i18n-attr="alt:hero_image_alt" class="w-full h-full object-cover" loading="eager">
                 <!-- Overlay gradient for readability -->
                 <div class="absolute inset-0 bg-gradient-to-t from-leaf/60 via-transparent to-transparent"></div>
                 <!-- Bottom text overlay -->
                 <div class="absolute bottom-0 left-0 right-0 p-5">
-                  <h3 class="text-xl font-bold font-serifThai text-white drop-shadow">ข้าวเม่าตำมือปรุงสดใหม่</h3>
-                  <p class="text-white/80 text-xs tracking-widest uppercase mt-1 font-semibold">Heritage Premium Quality</p>
+                  <h3 class="text-xl font-bold font-serifThai text-white drop-shadow" data-i18n="hero_overlay_title">ข้าวเม่าตำมือปรุงสดใหม่</h3>
+                  <p class="text-white/80 text-xs tracking-widest uppercase mt-1 font-semibold" data-i18n="hero_overlay_subtitle">Heritage Premium Quality</p>
                 </div>
                 <!-- Floating accent tag -->
                 <div class="absolute bottom-16 right-4 bg-white/90 border border-beige px-3 py-1.5 rounded-xl shadow-sm text-xs font-bold text-charcoal flex items-center space-x-2">
                   <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
-                  <span>ทำวันต่อวัน พร้อมจัดส่งทั่วประเทศ</span>
+                  <span data-i18n="hero_overlay_fresh">ทำวันต่อวัน พร้อมจัดส่งทั่วประเทศ</span>
                 </div>
               </div>
 
@@ -333,7 +333,7 @@
               <span class="text-4xl sm:text-5xl font-extrabold text-gold font-serifThai counter" data-target="2500" id="counter-customers">0</span>
               <span class="text-gold text-3xl font-extrabold pb-1">+</span>
             </div>
-            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide">ลูกค้าไว้วางใจทั่วประเทศ</p>
+            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide" data-i18n="social_proof_customers">ลูกค้าไว้วางใจทั่วประเทศ</p>
             <div class="w-8 h-0.5 bg-gold/40 mx-auto mt-3 rounded-full"></div>
           </div>
 
@@ -343,7 +343,7 @@
               <span class="text-4xl sm:text-5xl font-extrabold text-gold font-serifThai counter" data-target="5000" id="counter-orders">0</span>
               <span class="text-gold text-3xl font-extrabold pb-1">+</span>
             </div>
-            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide">ออเดอร์จัดส่งสำเร็จแล้ว</p>
+            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide" data-i18n="social_proof_orders">ออเดอร์จัดส่งสำเร็จแล้ว</p>
             <div class="w-8 h-0.5 bg-gold/40 mx-auto mt-3 rounded-full"></div>
           </div>
 
@@ -353,7 +353,7 @@
               <span class="text-4xl sm:text-5xl font-extrabold text-gold font-serifThai counter" data-target="500" id="counter-reviews">0</span>
               <span class="text-gold text-3xl font-extrabold pb-1">+</span>
             </div>
-            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide">รีวิว 5 ดาวจากลูกค้าจริง</p>
+            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide" data-i18n="social_proof_reviews">รีวิว 5 ดาวจากลูกค้าจริง</p>
             <div class="w-8 h-0.5 bg-gold/40 mx-auto mt-3 rounded-full"></div>
           </div>
 
@@ -363,7 +363,7 @@
               <span class="text-4xl sm:text-5xl font-extrabold text-gold font-serifThai counter" data-target="10" id="counter-years">0</span>
               <span class="text-gold text-3xl font-extrabold pb-1">+</span>
             </div>
-            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide">ปีแห่งภูมิปัญญาข้าวเม่า</p>
+            <p class="text-ivory/70 text-sm font-medium mt-2 tracking-wide" data-i18n="social_proof_years">ปีแห่งภูมิปัญญาข้าวเม่า</p>
             <div class="w-8 h-0.5 bg-gold/40 mx-auto mt-3 rounded-full"></div>
           </div>
 
@@ -406,14 +406,14 @@
           <!-- Image Column -->
           <div class="reveal order-last lg:order-first flex justify-center">
             <div class="w-full sm:w-[480px] h-[360px] sm:h-[420px] bg-[#FAF6EE] border-2 border-gold rounded-3xl p-6 shadow-xl flex flex-col justify-between relative hover-scale">
-              <span class="absolute top-4 left-4 bg-gold text-leaf text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-full">
+              <span class="absolute top-4 left-4 bg-gold text-leaf text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-full" data-i18n="giftset_badge">
                 👑 ของฝากเกียรติยศ
               </span>
               <div class="w-full h-full rounded-xl overflow-hidden relative border border-beige">
-                <img src="assets/images/premium_gift_set.jpg" alt="Premium Wooden Gift Set ชุดของฝากข้าวเม่ากล่องไม้" class="w-full h-full object-cover" loading="lazy">
+                <img src="assets/images/premium_gift_set.jpg" alt="Premium Wooden Gift Set ชุดของฝากข้าวเม่ากล่องไม้" data-i18n-attr="alt:giftset_image_alt" class="w-full h-full object-cover" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-leaf/50 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4">
-                  <span class="text-white font-bold font-serifThai text-lg drop-shadow">Premium Wooden Gift Set</span>
+                  <span class="text-white font-bold font-serifThai text-lg drop-shadow" data-i18n="giftset_image_label">Premium Wooden Gift Set</span>
                 </div>
               </div>
             </div>
@@ -421,13 +421,13 @@
 
           <!-- Content Column -->
           <div class="space-y-6 sm:space-y-8 max-w-xl mx-auto lg:mx-0 reveal">
-            <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block">Premium Gift Set</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai leading-[1.2]">
+            <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block" data-i18n="giftset_eyebrow">Premium Gift Set</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai leading-[1.2]" data-i18n-html="giftset_title">
               ส่งต่อความรู้สึกดีๆ ด้วย <br>
               <span class="premium-gold-text">ชุดของฝากข้าวเม่ากล่องไม้</span>สุดหรู
             </h2>
             <div class="w-16 h-1 bg-gold rounded-full"></div>
-            <p class="text-riceBrown leading-relaxed font-medium">
+            <p class="text-riceBrown leading-relaxed font-medium" data-i18n="giftset_desc">
               ยกระดับของขวัญไทยสู่มาตรฐานสากล ด้วยกล่องบรรจุไม้สักทองอย่างดี ขัดเนียนหรู คาดริบบิ้นด้ายทองทอมือ พร้อมการ์ดเขียนคำอวยพรร่วมสมัย บรรจุข้าวเม่าชิกเนเจอร์สูตรถนอมอาหารพิเศษ เหมาะสมที่สุดกับการแสดงความขอบคุณผู้ใหญ่ที่เคารพ ลูกค้า และพันธมิตรคนสำคัญ
             </p>
 
@@ -436,19 +436,19 @@
                 <span class="bg-[#EBF0EC] text-leaf p-1 rounded-full">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span>กล่องไม้สักทองสลักลายแบรนด์หรูหรา</span>
+                <span data-i18n="giftset_feature_1">กล่องไม้สักทองสลักลายแบรนด์หรูหรา</span>
               </div>
               <div class="flex items-center space-x-3 text-charcoal font-semibold">
                 <span class="bg-[#EBF0EC] text-leaf p-1 rounded-full">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span>บรรจุระบบถนอมล็อกกลิ่นคงความหอม 100%</span>
+                <span data-i18n="giftset_feature_2">บรรจุระบบถนอมล็อกกลิ่นคงความหอม 100%</span>
               </div>
               <div class="flex items-center space-x-3 text-charcoal font-semibold">
                 <span class="bg-[#EBF0EC] text-leaf p-1 rounded-full">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span>พร้อมชาออร์แกนิกเกสรเกสรดอกไม้เคียงชุดเสิร์ฟ</span>
+                <span data-i18n="giftset_feature_3">พร้อมชาออร์แกนิกเกสรเกสรดอกไม้เคียงชุดเสิร์ฟ</span>
               </div>
             </div>
 
@@ -456,12 +456,12 @@
               <a href="https://line.me" target="_blank" rel="noopener noreferrer"
                  onclick="trackCtaClick('line', 'giftset')"
                  class="inline-flex items-center justify-center rounded-full bg-leaf px-8 py-3.5 text-base font-bold text-white shadow-md hover:bg-charcoal transition-all hover-scale border border-gold/20">
-                สั่งซื้อชุดของขวัญ
+                <span data-i18n="giftset_cta_primary">สั่งซื้อชุดของขวัญ</span>
               </a>
               <a href="#corporate"
                  onclick="trackEvent('click_corporate_cta', { section: 'giftset_secondary' })"
                  class="inline-flex items-center justify-center rounded-full border border-leaf px-8 py-3.5 text-base font-semibold text-leaf bg-white hover:bg-cream">
-                สั่งสำหรับองค์กร (B2B)
+                <span data-i18n="giftset_cta_secondary">สั่งสำหรับองค์กร (B2B)</span>
               </a>
             </div>
           </div>
@@ -475,8 +475,8 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2">Designed for Every Moment</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai">ของฝากที่เหมาะสมกับทุกวาระโอกาสพิเศษ</h2>
+          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2" data-i18n="occasions_eyebrow">Designed for Every Moment</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai" data-i18n="occasions_title">ของฝากที่เหมาะสมกับทุกวาระโอกาสพิเศษ</h2>
           <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
         </div>
 
@@ -490,8 +490,8 @@
               </svg>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">ของขวัญกราบไหว้ผู้ใหญ่</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="occasion_1_title">ของขวัญกราบไหว้ผู้ใหญ่</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="occasion_1_desc">
                 สร้างความประทับใจและความรักใคร่เอ็นดู มอบของขวัญไทยคุณภาพดั้งเดิม สะอาดถูกสุขอนามัย แสดงความนอบน้อมและความใส่ใจต่อสุขภาพ
               </p>
             </div>
@@ -505,8 +505,8 @@
               </svg>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">ของสมนาคุณคู่ค้าทางธุรกิจ</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="occasion_2_title">ของสมนาคุณคู่ค้าทางธุรกิจ</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="occasion_2_desc">
                 ส่งเสริมภาพลักษณ์ธุรกิจด้วยของฝากสลักแบรนด์องค์กร หรูหรา สุภาพ ร่วมสมัย สื่อถึงการใส่ใจในการเลือกสิ่งที่เป็นธรรมชาติและประณีตให้แก่คู่ค้า
               </p>
             </div>
@@ -520,8 +520,8 @@
               </svg>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">เวลาน้ำชากาแฟโปรดส่วนตัว</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="occasion_3_title">เวลาน้ำชากาแฟโปรดส่วนตัว</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="occasion_3_desc">
                 เพิ่มรสชาติความอบอุ่นให้วันพักผ่อน ทานข้าวเม่านุ่มละมุน เคียงคู่เครื่องดื่มร้อนแก้วโปรด เติมเต็มช่วงเวลาแห่งความสุขดั่งขนมชั้นเลิศ
               </p>
             </div>
@@ -542,16 +542,16 @@
           
           <!-- Text Column -->
           <div class="space-y-6 sm:space-y-8 max-w-xl mx-auto lg:mx-0 reveal">
-            <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block">Heritage & Craft</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai leading-[1.2]">
+            <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block" data-i18n="heritage_eyebrow">Heritage & Craft</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai leading-[1.2]" data-i18n-html="heritage_title">
               มรดกรสชาติตำนานพื้นถิ่น <br>
               สู่อัญมณีแห่ง<span class="premium-gold-text">ขนมไทยพรีเมียม</span>
             </h2>
             <div class="w-16 h-1 bg-gold rounded-full"></div>
-            <p class="text-riceBrown leading-relaxed font-medium">
+            <p class="text-riceBrown leading-relaxed font-medium" data-i18n="heritage_desc_1">
               ณ หมู่บ้านเกษตรดั้งเดิม ข้าวเหนียวอ่อนที่ยังไม่สุกเต็มแก่จะได้รับการเก็บเกี่ยวมือในช่วงยามเช้าของฤดูน้ำหลาก ซึ่งเป็นช่วงเวลาพิเศษที่เปลือกข้าวให้กลิ่นหอมน้ำนมรวงข้าวสูงสุด นำมาคั่วด้วยเตาดินเผาฟืนไม้ธรรมชาติแบบใจเย็น แล้วนำมาตำซ้อมมือด้วยครกหินกึ่งทำมือดั้งเดิม
             </p>
-            <p class="text-riceBrown leading-relaxed font-medium">
+            <p class="text-riceBrown leading-relaxed font-medium" data-i18n="heritage_desc_2">
               แบรนด์ของเราได้รื้อฟื้นภูมิปัญญาล้ำค่านี้ โดยรักษาจิตวิญญาณแห่งวิถีความประณีตดั้งเดิม 100% ควบคู่กับมาตรฐานการแปรรูปความสะอาดอันทันสมัย ล็อกรสสัมผัสหอมสดเหนียวนุ่มของน้ำนมข้าวเม่าให้ยาวนานขึ้น เพื่อให้ของฝากชิ้นนี้เต็มไปด้วยคุณค่าทางประวัติศาสตร์และอร่อยประณีตที่สุดในทุกอณูสัมผัส
             </p>
           </div>
@@ -562,11 +562,11 @@
               <!-- Golden accent corner line border simulated with custom CSS premium-gold-border -->
               <div class="absolute inset-0 border border-gold/30 rounded-2xl pointer-events-none m-2"></div>
               <div class="w-full h-full rounded-lg overflow-hidden relative border border-beige">
-                <img src="assets/images/khao_mao_kluk.jpg" alt="วิถีคราฟต์พื้นถิ่นโบราณ ข้าวเม่าไทย" class="w-full h-full object-cover" loading="lazy">
+                <img src="assets/images/khao_mao_kluk.jpg" alt="วิถีคราฟต์พื้นถิ่นโบราณ ข้าวเม่าไทย" data-i18n-attr="alt:heritage_image_alt" class="w-full h-full object-cover" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4">
-                  <h4 class="text-lg font-bold font-serifThai text-white drop-shadow">วิถีคราฟต์พื้นถิ่นโบราณ</h4>
-                  <p class="text-white/70 text-xs tracking-wider uppercase font-semibold mt-0.5">Heritage & Craft</p>
+                  <h4 class="text-lg font-bold font-serifThai text-white drop-shadow" data-i18n="heritage_image_title">วิถีคราฟต์พื้นถิ่นโบราณ</h4>
+                  <p class="text-white/70 text-xs tracking-wider uppercase font-semibold mt-0.5" data-i18n="heritage_image_subtitle">Heritage & Craft</p>
                 </div>
               </div>
             </div>
@@ -581,8 +581,8 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2">Uncompromised Quality</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai">ทำไมข้าวเม่าของร้านเราถึงแตกต่าง?</h2>
+          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2" data-i18n="whychooseus_eyebrow">Uncompromised Quality</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai" data-i18n="whychooseus_title">ทำไมข้าวเม่าของร้านเราถึงแตกต่าง?</h2>
           <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
         </div>
 
@@ -594,8 +594,8 @@
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">ข้าวเม็ดรวงอ่อนคัดมือ</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="whychooseus_1_title">ข้าวเม็ดรวงอ่อนคัดมือ</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="whychooseus_1_desc">
                 เราปฏิเสธการซื้อเกรดข้าวปนทั่วไป แต่คัดจองแปลงนาล่วงหน้า เพื่อตัดรวงข้าวเหนียวอ่อนสายพันธุ์ดีเลิศช่วงสุก 70% ซึ่งเปี่ยมล้นน้ำนมข้าวนมเหนียวหอมพิเศษที่สุด
               </p>
             </div>
@@ -607,8 +607,8 @@
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">กรรมวิธีเตาดินฟืนไม้โบราณ</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="whychooseus_2_title">กรรมวิธีเตาดินฟืนไม้โบราณ</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="whychooseus_2_desc">
                 การคั่วใช้เทคนิคคุมไฟเตาดินธรรมชาติ คั่วช้าๆ ด้วยฟืนไม้จากป่าชุมชน ส่งเสริมให้ควันละมุนเกาะผิวเปลือกข้าว เกิดกลิ่นหอมอบอวลเฉพาะตัวที่เตาไฟฟ้ายุคใหม่เลียนแบบไม่ได้
               </p>
             </div>
@@ -620,8 +620,8 @@
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">มาตรฐานปลอดสารและสารฟอกขาว 100%</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="whychooseus_3_title">มาตรฐานปลอดสารและสารฟอกขาว 100%</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="whychooseus_3_desc">
                 สีเขียวจากข้าวเม่าของร้านเรามาจากน้ำนมธรรมชาติของรวงข้าวสีอ่อนแท้ ปราศจากการแต่งสีเคมี ไม่ใส่สารกันบูด และล้างทรายเศษแกลบสามชั้นสะอาดหมดจดวางใจได้
               </p>
             </div>
@@ -633,8 +633,8 @@
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2">จัดส่งแบบคุมอุณหภูมิเย็นเฉียบ</h3>
-              <p class="text-riceBrown text-sm leading-relaxed">
+              <h3 class="text-xl font-bold font-serifThai text-leaf mb-2" data-i18n="whychooseus_4_title">จัดส่งแบบคุมอุณหภูมิเย็นเฉียบ</h3>
+              <p class="text-riceBrown text-sm leading-relaxed" data-i18n="whychooseus_4_desc">
                 หมดห่วงเรื่องเน่าเสียระหว่างทาง สินค้าสดใหม่บรรจุลงซองสุญญากาศแล้วห่อด้วยฟอยล์เย็นจัดส่งด้วยรถรักษาอุณหภูมิ แช่แข็งจนถึงหน้าประตูลูกค้าทั่วราชอาณาจักร
               </p>
             </div>
@@ -653,10 +653,10 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2">Artisan Steps</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai">5 ขั้นตอนการรังสรรค์<span class="text-gold">ข้าวเม่าอันสุดประณีต</span></h2>
+          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2" data-i18n="process_eyebrow">Artisan Steps</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai" data-i18n-html="process_title">5 ขั้นตอนการรังสรรค์<span class="text-gold">ข้าวเม่าอันสุดประณีต</span></h2>
           <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-          <p class="text-riceBrown text-sm mt-4 font-medium">พิถีพิถันทุกขั้นตอนจากภูมิปัญญาดั้งเดิม สู่รสสัมผัสพรีเมียมที่ยากจะลืมเลือน</p>
+          <p class="text-riceBrown text-sm mt-4 font-medium" data-i18n="process_desc">พิถีพิถันทุกขั้นตอนจากภูมิปัญญาดั้งเดิม สู่รสสัมผัสพรีเมียมที่ยากจะลืมเลือน</p>
         </div>
 
         <!-- Timeline Flow: Desktop horizontal, Mobile vertical -->
@@ -673,8 +673,8 @@
             
             <!-- Content -->
             <div class="ml-6 lg:ml-0 w-full bg-white p-5 lg:p-6 rounded-2xl shadow-sm border border-beige group-hover:border-gold/40 group-hover:shadow-md transition-all duration-300">
-              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">เก็บเกี่ยวยามเช้าตรู่</h3>
-              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed">คัดเฉพาะรวงข้าวเหนียวระยะน้ำนมสุก 70% ยามน้ำค้างเกาะ สัมผัสนิ่มหอมพิเศษ</p>
+              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="process_step_1_title">เก็บเกี่ยวยามเช้าตรู่</h3>
+              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed" data-i18n="process_step_1_desc">คัดเฉพาะรวงข้าวเหนียวระยะน้ำนมสุก 70% ยามน้ำค้างเกาะ สัมผัสนิ่มหอมพิเศษ</p>
             </div>
           </div>
 
@@ -685,8 +685,8 @@
             
             <!-- Content -->
             <div class="ml-6 lg:ml-0 w-full bg-white p-5 lg:p-6 rounded-2xl shadow-sm border border-beige group-hover:border-gold/40 group-hover:shadow-md transition-all duration-300">
-              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">คั่วเตาดินฟืนธรรมชาติ</h3>
-              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed">คั่วผ่านกระทะเหล็กเตาฟืนโคนดินเผาด้วยความร้อนสม่ำเสมอ จนแกลบทองแห้งกลิ่นหอมอบอวล</p>
+              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="process_step_2_title">คั่วเตาดินฟืนธรรมชาติ</h3>
+              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed" data-i18n="process_step_2_desc">คั่วผ่านกระทะเหล็กเตาฟืนโคนดินเผาด้วยความร้อนสม่ำเสมอ จนแกลบทองแห้งกลิ่นหอมอบอวล</p>
             </div>
           </div>
 
@@ -697,8 +697,8 @@
             
             <!-- Content -->
             <div class="ml-6 lg:ml-0 w-full bg-white p-5 lg:p-6 rounded-2xl shadow-sm border border-beige group-hover:border-gold/40 group-hover:shadow-md transition-all duration-300">
-              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">ตำตำซ้อมมือ</h3>
-              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed">ตำผ่านครกไม้โบราณจนเปลือกแกลบร่อนออกอย่างสมบูรณ์ เมล็ดข้าวแบนเหนียวนุ่มสีขี้ม้าธรรมชาติ</p>
+              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="process_step_3_title">ตำตำซ้อมมือ</h3>
+              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed" data-i18n="process_step_3_desc">ตำผ่านครกไม้โบราณจนเปลือกแกลบร่อนออกอย่างสมบูรณ์ เมล็ดข้าวแบนเหนียวนุ่มสีขี้ม้าธรรมชาติ</p>
             </div>
           </div>
 
@@ -709,8 +709,8 @@
             
             <!-- Content -->
             <div class="ml-6 lg:ml-0 w-full bg-white p-5 lg:p-6 rounded-2xl shadow-sm border border-beige group-hover:border-gold/40 group-hover:shadow-md transition-all duration-300">
-              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">คลุกปรุงสดใหม่</h3>
-              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed">คลุกเคล้าเนื้อมะพร้าวน้ำหอมอ่อนสดบางเฉียบ และเกลือสมุทร น้ำตาลทรายออร์แกนิกหวานน้อยละมุนพอดี</p>
+              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="process_step_4_title">คลุกปรุงสดใหม่</h3>
+              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed" data-i18n="process_step_4_desc">คลุกเคล้าเนื้อมะพร้าวน้ำหอมอ่อนสดบางเฉียบ และเกลือสมุทร น้ำตาลทรายออร์แกนิกหวานน้อยละมุนพอดี</p>
             </div>
           </div>
 
@@ -721,8 +721,8 @@
             
             <!-- Content -->
             <div class="ml-6 lg:ml-0 w-full bg-white p-5 lg:p-6 rounded-2xl shadow-sm border border-beige group-hover:border-gold/40 group-hover:shadow-md transition-all duration-300">
-              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2">ล็อกแพ็กสุญญากาศ</h3>
-              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed">บรรจุลงถุงสุญญากาศกันออกซิเจนแล้วนำเข้าตู้เย็นแช่แข็งอย่างรวดเร็ว รอส่งเย็นทั่วประเทศ</p>
+              <h3 class="text-base sm:text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="process_step_5_title">ล็อกแพ็กสุญญากาศ</h3>
+              <p class="text-riceBrown text-sm lg:text-xs xl:text-sm leading-relaxed" data-i18n="process_step_5_desc">บรรจุลงถุงสุญญากาศกันออกซิเจนแล้วนำเข้าตู้เย็นแช่แข็งอย่างรวดเร็ว รอส่งเย็นทั่วประเทศ</p>
             </div>
           </div>
 
@@ -736,8 +736,8 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2">Visual Inspiration</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai">แกลเลอรีความประณีตข้าวเม่า</h2>
+          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2" data-i18n="gallery_eyebrow">Visual Inspiration</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai" data-i18n="gallery_title">แกลเลอรีความประณีตข้าวเม่า</h2>
           <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
         </div>
 
@@ -747,12 +747,12 @@
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
               src="assets/images/hero_khao_mao.png"
-              alt="คัดเมล็ดข้าวเม่าอ่อนสด"
+              alt="คัดเมล็ดข้าวเม่าอ่อนสด" data-i18n-attr="alt:gallery_1_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown px-3 text-center">คัดเมล็ดข้าวเม่าอ่อนสด</span>
+              <span class="text-xs font-bold text-riceBrown px-3 text-center" data-i18n="gallery_1_label">คัดเมล็ดข้าวเม่าอ่อนสด</span>
             </div>
           </div>
 
@@ -760,12 +760,12 @@
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
               src="assets/images/khao_mao_rang.jpg"
-              alt="คั่วเตาดินฟืนธรรมชาติ"
+              alt="คั่วเตาดินฟืนธรรมชาติ" data-i18n-attr="alt:gallery_2_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown px-3 text-center">คั่วเตาดินฟืนธรรมชาติ</span>
+              <span class="text-xs font-bold text-riceBrown px-3 text-center" data-i18n="gallery_2_label">คั่วเตาดินฟืนธรรมชาติ</span>
             </div>
           </div>
 
@@ -773,12 +773,12 @@
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
               src="assets/images/khao_mao_kluk.jpg"
-              alt="คลุกมะพร้าวน้ำหอมอ่อน"
+              alt="คลุกมะพร้าวน้ำหอมอ่อน" data-i18n-attr="alt:gallery_3_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown px-3 text-center">คลุกมะพร้าวน้ำหอมอ่อน</span>
+              <span class="text-xs font-bold text-riceBrown px-3 text-center" data-i18n="gallery_3_label">คลุกมะพร้าวน้ำหอมอ่อน</span>
             </div>
           </div>
 
@@ -786,12 +786,12 @@
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
               src="assets/images/premium_gift_set.jpg"
-              alt="ชุดของขวัญ Premium Gift Set"
+              alt="ชุดของขวัญ Premium Gift Set" data-i18n-attr="alt:gallery_4_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown px-3 text-center">ชุดของขวัญ Premium Gift Set</span>
+              <span class="text-xs font-bold text-riceBrown px-3 text-center" data-i18n="gallery_4_label">ชุดของขวัญ Premium Gift Set</span>
             </div>
           </div>
 
@@ -799,12 +799,12 @@
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
               src="assets/images/khao_mao_rang.jpg"
-              alt="เสิร์ฟคู่ชาร้อนยามบ่าย"
+              alt="เสิร์ฟคู่ชาร้อนยามบ่าย" data-i18n-attr="alt:gallery_5_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown px-3 text-center">เสิร์ฟคู่ชาร้อนยามบ่าย</span>
+              <span class="text-xs font-bold text-riceBrown px-3 text-center" data-i18n="gallery_5_label">เสิร์ฟคู่ชาร้อนยามบ่าย</span>
             </div>
           </div>
 
@@ -812,12 +812,12 @@
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
               src="assets/images/crispy_khao_mao.jpg"
-              alt="ครัวทำมือถูกสุขอนามัย"
+              alt="ครัวทำมือถูกสุขอนามัย" data-i18n-attr="alt:gallery_6_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-              <span class="text-xs font-bold text-riceBrown px-3 text-center">ครัวทำมือถูกสุขอนามัย</span>
+              <span class="text-xs font-bold text-riceBrown px-3 text-center" data-i18n="gallery_6_label">ครัวทำมือถูกสุขอนามัย</span>
             </div>
           </div>
 
@@ -832,10 +832,10 @@
 
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-10 reveal">
-          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2">Follow Us</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai">ติดตามเราบน Social Media</h2>
+          <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2" data-i18n="social_eyebrow">Follow Us</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai" data-i18n="social_title">ติดตามเราบน Social Media</h2>
           <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-          <p class="text-riceBrown text-sm mt-4 font-medium">แชร์ช่วงเวลาของคุณพร้อมข้าวเม่าพรีเมียม แท็ก <span class="text-leaf font-bold">#KhaoMaoPremium</span> เพื่อลุ้นรับของรางวัลพิเศษ</p>
+          <p class="text-riceBrown text-sm mt-4 font-medium" data-i18n-html="social_desc">แชร์ช่วงเวลาของคุณพร้อมข้าวเม่าพรีเมียม แท็ก <span class="text-leaf font-bold">#KhaoMaoPremium</span> เพื่อลุ้นรับของรางวัลพิเศษ</p>
         </div>
 
         <!-- Platform Tabs -->
@@ -843,12 +843,12 @@
           <button onclick="showFeed('instagram')" id="tab-instagram"
             class="social-tab-btn flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold border-2 border-leaf bg-leaf text-white transition-all">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            Instagram
+            <span data-i18n="social_tab_instagram">Instagram</span>
           </button>
           <button onclick="showFeed('tiktok')" id="tab-tiktok"
             class="social-tab-btn flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold border-2 border-beige bg-white text-riceBrown transition-all hover:border-leaf hover:text-leaf">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.86a8.27 8.27 0 004.84 1.55V6.96a4.85 4.85 0 01-1.07-.27z"/></svg>
-            TikTok
+            <span data-i18n="social_tab_tiktok">TikTok</span>
           </button>
         </div>
 
@@ -856,7 +856,7 @@
         <div id="feed-instagram" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 reveal">
           <!-- Post 1 -->
           <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer">
-            <img src="assets/images/khao_mao_kluk.jpg" alt="ข้าวเม่าคลุก" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/khao_mao_kluk.jpg" alt="ข้าวเม่าคลุก" data-i18n-attr="alt:social_instagram_alt_1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-leaf/0 group-hover:bg-leaf/40 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                 <p class="font-bold text-xs">❤ 1.2k</p>
@@ -867,7 +867,7 @@
           </a>
           <!-- Post 2 -->
           <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer">
-            <img src="assets/images/khao_mao_tod.jpg" alt="ข้าวเม่าทอด" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/khao_mao_tod.jpg" alt="ข้าวเม่าทอด" data-i18n-attr="alt:social_instagram_alt_2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-leaf/0 group-hover:bg-leaf/40 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                 <p class="font-bold text-xs">❤ 2.4k</p>
@@ -878,7 +878,7 @@
           </a>
           <!-- Post 3 -->
           <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer">
-            <img src="assets/images/premium_gift_set.jpg" alt="Premium Gift Set" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/premium_gift_set.jpg" alt="Premium Gift Set" data-i18n-attr="alt:social_instagram_alt_3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-leaf/0 group-hover:bg-leaf/40 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                 <p class="font-bold text-xs">❤ 3.1k</p>
@@ -889,7 +889,7 @@
           </a>
           <!-- Post 4 -->
           <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer">
-            <img src="assets/images/khao_mao_rang.jpg" alt="ข้าวเม่าราง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/khao_mao_rang.jpg" alt="ข้าวเม่าราง" data-i18n-attr="alt:social_instagram_alt_4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-leaf/0 group-hover:bg-leaf/40 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                 <p class="font-bold text-xs">❤ 987</p>
@@ -900,7 +900,7 @@
           </a>
           <!-- Post 5 -->
           <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer">
-            <img src="assets/images/corporate_gift_box.jpg" alt="Corporate Gift" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/corporate_gift_box.jpg" alt="Corporate Gift" data-i18n-attr="alt:social_instagram_alt_5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-leaf/0 group-hover:bg-leaf/40 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                 <p class="font-bold text-xs">❤ 1.8k</p>
@@ -911,7 +911,7 @@
           </a>
           <!-- Post 6 -->
           <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer">
-            <img src="assets/images/crispy_khao_mao.jpg" alt="ข้าวเม่าอบกรอบ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/crispy_khao_mao.jpg" alt="ข้าวเม่าอบกรอบ" data-i18n-attr="alt:social_instagram_alt_6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-leaf/0 group-hover:bg-leaf/40 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                 <p class="font-bold text-xs">❤ 745</p>
@@ -926,7 +926,7 @@
         <div id="feed-tiktok" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 reveal">
           <!-- TikTok Post 1 -->
           <a href="#" onclick="return false;" class="group relative rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer" style="aspect-ratio:9/16; max-height: 280px;">
-            <img src="assets/images/khao_mao_tod.jpg" alt="TikTok: ข้าวเม่าทอด" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/khao_mao_tod.jpg" alt="TikTok: ข้าวเม่าทอด" data-i18n-attr="alt:social_tiktok_alt_1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-2">
               <span class="self-end bg-black/60 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">TikTok</span>
               <div class="text-white">
@@ -937,7 +937,7 @@
           </a>
           <!-- TikTok Post 2 -->
           <a href="#" onclick="return false;" class="group relative rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer" style="aspect-ratio:9/16; max-height: 280px;">
-            <img src="assets/images/khao_mao_kluk.jpg" alt="TikTok: ข้าวเม่าคลุก" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/khao_mao_kluk.jpg" alt="TikTok: ข้าวเม่าคลุก" data-i18n-attr="alt:social_tiktok_alt_2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-2">
               <span class="self-end bg-black/60 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">TikTok</span>
               <div class="text-white">
@@ -948,7 +948,7 @@
           </a>
           <!-- TikTok Post 3 -->
           <a href="#" onclick="return false;" class="group relative rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer" style="aspect-ratio:9/16; max-height: 280px;">
-            <img src="assets/images/premium_gift_set.jpg" alt="TikTok: Gift Set" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/premium_gift_set.jpg" alt="TikTok: Gift Set" data-i18n-attr="alt:social_tiktok_alt_3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-2">
               <span class="self-end bg-black/60 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">TikTok</span>
               <div class="text-white">
@@ -959,7 +959,7 @@
           </a>
           <!-- TikTok Post 4 -->
           <a href="#" onclick="return false;" class="group relative rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer" style="aspect-ratio:9/16; max-height: 280px;">
-            <img src="assets/images/khao_mao_rang.jpg" alt="TikTok: ข้าวเม่าราง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/khao_mao_rang.jpg" alt="TikTok: ข้าวเม่าราง" data-i18n-attr="alt:social_tiktok_alt_4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-2">
               <span class="self-end bg-black/60 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">TikTok</span>
               <div class="text-white">
@@ -970,7 +970,7 @@
           </a>
           <!-- TikTok Post 5 -->
           <a href="#" onclick="return false;" class="group relative rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer" style="aspect-ratio:9/16; max-height: 280px;">
-            <img src="assets/images/corporate_gift_box.jpg" alt="TikTok: Corporate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/corporate_gift_box.jpg" alt="TikTok: Corporate" data-i18n-attr="alt:social_tiktok_alt_5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-2">
               <span class="self-end bg-black/60 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">TikTok</span>
               <div class="text-white">
@@ -981,7 +981,7 @@
           </a>
           <!-- TikTok Post 6 -->
           <a href="#" onclick="return false;" class="group relative rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer" style="aspect-ratio:9/16; max-height: 280px;">
-            <img src="assets/images/crispy_khao_mao.jpg" alt="TikTok: ข้าวเม่ากรอบ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="assets/images/crispy_khao_mao.jpg" alt="TikTok: ข้าวเม่ากรอบ" data-i18n-attr="alt:social_tiktok_alt_6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-2">
               <span class="self-end bg-black/60 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">TikTok</span>
               <div class="text-white">
@@ -997,12 +997,12 @@
           <a href="#" onclick="return false;"
              class="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-leaf text-leaf font-bold text-sm hover:bg-leaf hover:text-white transition-all hover-scale">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            ติดตาม Instagram
+            <span data-i18n="social_follow_instagram">ติดตาม Instagram</span>
           </a>
           <a href="#" onclick="return false;"
              class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-charcoal text-white font-bold text-sm hover:bg-black transition-all hover-scale">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.86a8.27 8.27 0 004.84 1.55V6.96a4.85 4.85 0 01-1.07-.27z"/></svg>
-            ติดตาม TikTok
+            <span data-i18n="social_follow_tiktok">ติดตาม TikTok</span>
           </a>
         </div>
 
@@ -1058,41 +1058,41 @@
             
             <!-- Left Info column -->
             <div class="lg:col-span-7 space-y-6">
-              <span class="inline-block px-3.5 py-1.5 text-xs font-bold text-leaf bg-gold rounded-full uppercase tracking-wider">
+              <span class="inline-block px-3.5 py-1.5 text-xs font-bold text-leaf bg-gold rounded-full uppercase tracking-wider" data-i18n="corporate_badge">
                 🏢 B2B Corporate Orders
               </span>
-              <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serifThai text-ivory leading-[1.2]">
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serifThai text-ivory leading-[1.2]" data-i18n-html="corporate_title">
                 ชุดของฝากข้าวเม่า <br>
                 <span class="premium-gold-text">สำหรับลูกค้าองค์กรธุรกิจ</span>
               </h2>
-              <p class="text-ivory/80 text-sm sm:text-base leading-relaxed max-w-xl font-medium">
+              <p class="text-ivory/80 text-sm sm:text-base leading-relaxed max-w-xl font-medium" data-i18n="corporate_desc">
                 ร่วมเฉลิมฉลองเทศกาลสำคัญ ต้อนรับคู่ค้า หรือแจกสมนาคุณพนักงาน ด้วยข้าวเม่าพรีเมียมในแพ็กเกจกล่องหรูหราที่ถูกปรับแต่งสายคาด การ์ดอวยพร และปั๊มฟอยล์เงิน/ทอง ตราสัญลักษณ์โลโก้องค์กรของคุณโดยเฉพาะ ด้วยการบริการแบบจัดซื้อระดับธุรกิจที่น่าเชื่อถือ
               </p>
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold">
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
-                  <span>รับปั๊มตราโลโก้องค์กรบนฝากล่อง</span>
+                  <span data-i18n="corporate_feature_1">รับปั๊มตราโลโก้องค์กรบนฝากล่อง</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
-                  <span>เลือกปรับแต่งสีริบบิ้นตาม CI บริษัท</span>
+                  <span data-i18n="corporate_feature_2">เลือกปรับแต่งสีริบบิ้นตาม CI บริษัท</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
-                  <span>บริการออกใบกำกับภาษีเต็มรูปแบบ</span>
+                  <span data-i18n="corporate_feature_3">บริการออกใบกำกับภาษีเต็มรูปแบบ</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
-                  <span>ส่งแยกรายที่อยู่คู่ค้าได้ทั่วประเทศ</span>
+                  <span data-i18n="corporate_feature_4">ส่งแยกรายที่อยู่คู่ค้าได้ทั่วประเทศ</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
-                  <span>รองรับจำนวนสั่งซื้อตั้งแต่ 30–5,000 ชุดขึ้นไป</span>
+                  <span data-i18n="corporate_feature_5">รองรับจำนวนสั่งซื้อตั้งแต่ 30–5,000 ชุดขึ้นไป</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <span class="text-gold">✔</span>
-                  <span>มีทีมดูแลองค์กรโดยเฉพาะ ตั้งแต่ดีไซน์จนวันส่งมอบ</span>
+                  <span data-i18n="corporate_feature_6">มีทีมดูแลองค์กรโดยเฉพาะ ตั้งแต่ดีไซน์จนวันส่งมอบ</span>
                 </div>
               </div>
             </div>
@@ -1100,19 +1100,19 @@
             <!-- Right CTA column -->
             <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center">
               <div class="bg-white/95 text-charcoal border border-beige p-6 rounded-2xl shadow-xl w-full max-w-sm space-y-4">
-                <h3 class="text-lg font-bold font-serifThai text-leaf text-center">สอบถามแพ็กเกจ B2B ด่วน</h3>
-                <p class="text-xs text-riceBrown text-center">แอดมินฝ่ายขายองค์กรติดต่อกลับภายใน 1 ชั่วโมงทำการ</p>
+                <h3 class="text-lg font-bold font-serifThai text-leaf text-center" data-i18n="corporate_card_title">สอบถามแพ็กเกจ B2B ด่วน</h3>
+                <p class="text-xs text-riceBrown text-center" data-i18n="corporate_card_desc">แอดมินฝ่ายขายองค์กรติดต่อกลับภายใน 1 ชั่วโมงทำการ</p>
                 
                 <a href="https://line.me" target="_blank" rel="noopener noreferrer"
                    onclick="trackEvent('click_corporate_cta', { action: 'line_lead_form' })"
                    class="block w-full text-center rounded-full bg-leaf text-white font-bold py-3 text-sm hover:bg-charcoal transition-all hover-scale shadow-md border border-gold/30">
-                  ทัก LINE คุยเงื่อนไข
+                  <span data-i18n="corporate_cta_line">ทัก LINE คุยเงื่อนไข</span>
                 </a>
                 
                 <a href="tel:+66888888888"
                    onclick="trackEvent('click_corporate_cta', { action: 'call_lead_form' })"
                    class="block w-full text-center rounded-full border border-leaf text-leaf bg-white font-bold py-3 text-sm hover:bg-cream transition-all hover-scale">
-                  โทรด่วน 088-888-8888
+                  <span data-i18n="corporate_cta_call">โทรด่วน 088-888-8888</span>
                 </a>
               </div>
             </div>
@@ -1139,32 +1139,32 @@
           <div class="bg-cream border border-beige p-6 rounded-2xl relative text-center hover-scale reveal">
             <span class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-leaf text-white rounded-full flex items-center justify-center font-bold font-serifThai text-sm">1</span>
             <div class="text-riceGreen text-3xl mb-3 mt-2">💬</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">ทักแชทสั่งสินค้า</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">แอดไลน์ หรือส่งข้อความผ่านทาง Facebook แจ้งรายการขนมที่สนใจและจำนวนที่ต้องการ</p>
+            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="orderflow_step_1_title">ทักแชทสั่งสินค้า</h3>
+            <p class="text-riceBrown text-xs leading-relaxed" data-i18n="orderflow_step_1_desc">แอดไลน์ หรือส่งข้อความผ่านทาง Facebook แจ้งรายการขนมที่สนใจและจำนวนที่ต้องการ</p>
           </div>
 
           <!-- Step 2 -->
           <div class="bg-cream border border-beige p-6 rounded-2xl relative text-center hover-scale reveal">
             <span class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-leaf text-white rounded-full flex items-center justify-center font-bold font-serifThai text-sm">2</span>
             <div class="text-riceGreen text-3xl mb-3 mt-2">💳</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">ชำระเงินโอนด่วน</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">ชำระด้วยการโอนเงินเข้าบัญชีธนาคารร้าน หรือเลือกรับบริการชำระปลายทางพร้อมส่งด่วน</p>
+            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="orderflow_step_2_title">ชำระเงินโอนด่วน</h3>
+            <p class="text-riceBrown text-xs leading-relaxed" data-i18n="orderflow_step_2_desc">ชำระด้วยการโอนเงินเข้าบัญชีธนาคารร้าน หรือเลือกรับบริการชำระปลายทางพร้อมส่งด่วน</p>
           </div>
 
           <!-- Step 3 -->
           <div class="bg-cream border border-beige p-6 rounded-2xl relative text-center hover-scale reveal">
             <span class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-leaf text-white rounded-full flex items-center justify-center font-bold font-serifThai text-sm">3</span>
             <div class="text-riceGreen text-3xl mb-3 mt-2">📝</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">แจ้งรหัสคอนเฟิร์ม</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">ทางร้านแจ้งคอนเฟิร์มรหัสออเดอร์พร้อมอัปเดตรอบการจัดทำสดใหม่จากเตาประณีตให้คุณ</p>
+            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="orderflow_step_3_title">แจ้งรหัสคอนเฟิร์ม</h3>
+            <p class="text-riceBrown text-xs leading-relaxed" data-i18n="orderflow_step_3_desc">ทางร้านแจ้งคอนเฟิร์มรหัสออเดอร์พร้อมอัปเดตรอบการจัดทำสดใหม่จากเตาประณีตให้คุณ</p>
           </div>
 
           <!-- Step 4 -->
           <div class="bg-cream border border-beige p-6 rounded-2xl relative text-center hover-scale reveal">
             <span class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-leaf text-white rounded-full flex items-center justify-center font-bold font-serifThai text-sm">4</span>
             <div class="text-riceGreen text-3xl mb-3 mt-2">❄</div>
-            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2">รับสินค้าเย็นแช่แข็ง</h3>
-            <p class="text-riceBrown text-xs leading-relaxed">รอรับขนมที่จัดส่งแช่เย็นควบคุมอุณหภูมิทั่วประเทศถึงหน้าบ้าน สดเหนียวนุ่มคงความดั้งเดิม</p>
+            <h3 class="text-lg font-bold font-serifThai text-leaf mb-2" data-i18n="orderflow_step_4_title">รับสินค้าเย็นแช่แข็ง</h3>
+            <p class="text-riceBrown text-xs leading-relaxed" data-i18n="orderflow_step_4_desc">รอรับขนมที่จัดส่งแช่เย็นควบคุมอุณหภูมิทั่วประเทศถึงหน้าบ้าน สดเหนียวนุ่มคงความดั้งเดิม</p>
           </div>
 
         </div>
@@ -1200,7 +1200,7 @@
       
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6 sm:space-y-8 reveal">
         <span class="text-xs font-bold text-gold uppercase tracking-widest block" data-i18n="final_cta_eyebrow">Start Tasting Today</span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serifThai text-ivory leading-[1.2]" data-i18n="final_cta_title">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serifThai text-ivory leading-[1.2]" data-i18n-html="final_cta_title">
           ลิ้มลองรสชาติข้าวเม่าเกรดพรีเมียม <br>
           <span class="premium-gold-text">ส่งต่อคุณค่าและความหอมสดใหม่</span>สู่โต๊ะอาหารคุณ
         </h2>
@@ -1212,11 +1212,11 @@
         <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
           <a href="https://line.me" target="_blank" rel="noopener noreferrer"
              onclick="trackCtaClick('line', 'final_cta')"
-             class="inline-flex items-center justify-center rounded-full bg-gold text-leaf px-10 py-4 text-base font-bold shadow-lg hover:bg-white transition-all hover-scale border border-gold" data-i18n="final_cta_line">
+             class="inline-flex items-center justify-center rounded-full bg-gold text-leaf px-10 py-4 text-base font-bold shadow-lg hover:bg-white transition-all hover-scale border border-gold">
             <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
               <path d="M24 10.3c0-4.2-4.1-7.7-9.2-7.7S5.6 6.1 5.6 10.3c0 3.8 3.3 6.9 7.7 7.6.3 0 .7.2.8.5l.2 1.3c.1.4 0 .8-.2.9-.2.2-.5.1-.9-.1l-1.6-1c-2-.6-3.8-1.9-5-3.5C2.6 13.9 1 11.2 1 8.2c0-4.8 5.1-8.7 11.4-8.7S23.8 3.4 23.8 8.2c0 1.2-.3 2.3-.9 3.3-.2.3-.1.7.2.9.2.2.6.1.8-.1.7-1.1 1.1-2.4 1.1-3.6z"/>
             </svg>
-            สั่งซื้อผ่าน LINE เลยวันนี้
+            <span data-i18n="final_cta_line">สั่งซื้อผ่าน LINE เลยวันนี้</span>
           </a>
           <a href="tel:+66888888888"
              onclick="trackCtaClick('call', 'final_cta')"
@@ -1229,33 +1229,68 @@
 
   </main>
 
-  <!-- 17. Footer -->
+  <!-- 17. Legal Details -->
+  <section id="legal-details" class="bg-ivory py-16 border-t border-beige">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold text-riceGreen uppercase tracking-widest block mb-2" data-i18n="legal_eyebrow">Privacy & Terms</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal font-serifThai" data-i18n="legal_title">นโยบายและเงื่อนไขสำคัญก่อนสั่งซื้อ</h2>
+        <p class="mt-4 text-sm sm:text-base text-riceBrown leading-relaxed" data-i18n="legal_desc">
+          เรารวบรวมข้อมูลเท่าที่จำเป็นต่อการรับคำสั่งซื้อ การจัดส่ง และการให้บริการหลังการขาย พร้อมอธิบายเงื่อนไขการสั่งซื้อเบื้องต้นอย่างโปร่งใสเพื่อให้คุณตัดสินใจได้อย่างมั่นใจ
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <article id="privacy-policy" class="rounded-3xl border border-beige bg-cream p-6 sm:p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-leaf font-serifThai mb-4" data-i18n="privacy_title">นโยบายความเป็นส่วนตัว</h3>
+          <ul class="space-y-3 text-sm text-riceBrown leading-relaxed">
+            <li data-i18n="privacy_item_1">เราใช้ข้อมูลติดต่อของคุณเพื่อยืนยันออเดอร์ นัดหมายการจัดส่ง และตอบคำถามเกี่ยวกับสินค้าเท่านั้น</li>
+            <li data-i18n="privacy_item_2">ข้อมูลการชำระเงินและที่อยู่จัดส่งจะถูกเข้าถึงเฉพาะผู้ดูแลที่เกี่ยวข้องกับการให้บริการ และจะไม่ขายต่อให้บุคคลภายนอก</li>
+            <li data-i18n="privacy_item_3">คุกกี้ที่ใช้บนเว็บไซต์มีไว้เพื่อจดจำภาษาที่เลือก วัดผลการใช้งาน และปรับปรุงประสบการณ์ใช้งานโดยรวม</li>
+            <li data-i18n="privacy_item_4">หากต้องการขอแก้ไขหรือลบข้อมูลส่วนบุคคล สามารถติดต่อทีมงานผ่านช่องทางที่ระบุในส่วนติดต่อของเว็บไซต์ได้</li>
+          </ul>
+        </article>
+
+        <article id="order-terms" class="rounded-3xl border border-beige bg-cream p-6 sm:p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-leaf font-serifThai mb-4" data-i18n="terms_title">เงื่อนไขการสั่งสินค้า</h3>
+          <ul class="space-y-3 text-sm text-riceBrown leading-relaxed">
+            <li data-i18n="terms_item_1">สินค้าสดใหม่บางรายการต้องสั่งล่วงหน้า โดยระยะเวลาจะขึ้นอยู่กับประเภทสินค้าและจำนวนที่ต้องการ</li>
+            <li data-i18n="terms_item_2">คำสั่งซื้อจะถือว่าสมบูรณ์เมื่อร้านยืนยันรายการ ราคา และการชำระเงินเรียบร้อยแล้ว</li>
+            <li data-i18n="terms_item_3">หากเป็นสินค้าควบคุมอุณหภูมิ กรุณาตรวจสอบผู้รับปลายทางให้พร้อมรับสินค้าในวันที่จัดส่งเพื่อรักษาคุณภาพ</li>
+            <li data-i18n="terms_item_4">กรณีต้องการเปลี่ยนแปลงที่อยู่หรือรายละเอียดออเดอร์ ควรแจ้งก่อนร้านเข้าสู่ขั้นตอนเตรียมและจัดส่งสินค้า</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18. Footer -->
   <footer class="bg-charcoal text-ivory/80 pt-16 pb-8 border-t border-gold/10 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 pb-12 border-b border-white/10">
         
         <!-- Info Column -->
         <div class="space-y-4">
-          <h4 class="text-2xl font-bold font-serifThai text-ivory tracking-tight">ข้าวเม่า<span class="premium-gold-text">พรีเมียม</span></h4>
-          <p class="text-xs leading-relaxed text-ivory/60 font-medium">
+          <h4 class="text-2xl font-bold font-serifThai text-ivory tracking-tight" data-i18n-html="brand_name">ข้าวเม่า<span class="premium-gold-text">พรีเมียม</span></h4>
+          <p class="text-xs leading-relaxed text-ivory/60 font-medium" data-i18n="footer_desc">
             คัดสรรรสชาติข้าวเม่าไทยดั้งเดิม จากทุ่งนาสู่อัญมณีแห่งขนมไทยพรีเมียม ปรุงสดใหม่แฮนด์คราฟต์ ถูกหลักอนามัย เพื่อส่งมอบของฝากที่ประณีตที่สุดแด่คุณ
           </p>
         </div>
 
         <!-- Links Column -->
         <div>
-          <h5 class="text-sm font-bold uppercase tracking-wider text-gold font-serifThai mb-4">บริการจัดสั่งซื้อ</h5>
+          <h5 class="text-sm font-bold uppercase tracking-wider text-gold font-serifThai mb-4" data-i18n="footer_links_title">บริการจัดสั่งซื้อ</h5>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="#products" class="hover:text-gold transition-colors">เมนูแนะนำชิกเนเจอร์</a></li>
-            <li><a href="#giftset" class="hover:text-gold transition-colors">ชุดกล่องของฝากพรีเมียม</a></li>
-            <li><a href="#corporate" class="hover:text-gold transition-colors">สิทธิพิเศษสำหรับลูกค้าองค์กร (B2B)</a></li>
-            <li><a href="#faq" class="hover:text-gold transition-colors">วันหมดอายุและการเก็บรักษา</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors" data-i18n="footer_link_products">เมนูแนะนำชิกเนเจอร์</a></li>
+            <li><a href="#giftset" class="hover:text-gold transition-colors" data-i18n="footer_link_giftset">ชุดกล่องของฝากพรีเมียม</a></li>
+            <li><a href="#corporate" class="hover:text-gold transition-colors" data-i18n="footer_link_corporate">สิทธิพิเศษสำหรับลูกค้าองค์กร (B2B)</a></li>
+            <li><a href="#faq" class="hover:text-gold transition-colors" data-i18n="footer_link_faq">วันหมดอายุและการเก็บรักษา</a></li>
           </ul>
         </div>
 
         <!-- Contact Column -->
         <div>
-          <h5 class="text-sm font-bold uppercase tracking-wider text-gold font-serifThai mb-4">ข้อมูลติดต่อแบรนด์</h5>
+          <h5 class="text-sm font-bold uppercase tracking-wider text-gold font-serifThai mb-4" data-i18n="footer_contact_title">ข้อมูลติดต่อแบรนด์</h5>
           <ul class="space-y-2.5 text-xs font-semibold">
             <li class="flex items-center space-x-2">
               <span>📞</span>
@@ -1270,7 +1305,7 @@
               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" 
                  onclick="trackEvent('click_google_map', { section: 'footer' })"
                  class="hover:text-gold transition-colors underline">
-                แผนที่สาขาหลัก (โคราช)
+                <span data-i18n="footer_map_link">แผนที่สาขาหลัก (โคราช)</span>
               </a>
             </li>
           </ul>
@@ -1278,8 +1313,8 @@
 
         <!-- Privacy & Legal Column -->
         <div class="space-y-4">
-          <h5 class="text-sm font-bold uppercase tracking-wider text-gold font-serifThai mb-4">การคุ้มครองข้อมูล</h5>
-          <p class="text-xs text-ivory/60 leading-relaxed font-medium">
+          <h5 class="text-sm font-bold uppercase tracking-wider text-gold font-serifThai mb-4" data-i18n="footer_privacy_title">การคุ้มครองข้อมูล</h5>
+          <p class="text-xs text-ivory/60 leading-relaxed font-medium" data-i18n="footer_privacy_desc">
             ทางร้านเคารพสิทธิ์และข้อมูลความเป็นส่วนตัวสูงสุดบนมาตราฐาน PDPA รายละเอียดเงื่อนไขการสะสมคุกกี้สามารถอ่านเพิ่มเติมได้ที่หน้านโยบายกฎหมายของแบรนด์
           </p>
         </div>
@@ -1288,11 +1323,11 @@
 
       <!-- Copyright row -->
       <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-ivory/40 font-semibold space-y-4 sm:space-y-0">
-        <p>© 2026 ข้าวเม่าพรีเมียม (Premium Khao Mao). สงวนลิขสิทธิ์ตามกฎหมาย.</p>
+        <p data-i18n="footer_copyright">© 2026 ข้าวเม่าพรีเมียม (Premium Khao Mao). สงวนลิขสิทธิ์ตามกฎหมาย.</p>
         <div class="flex space-x-4">
-          <a href="#" class="hover:underline">นโยบายความเป็นส่วนตัว</a>
+          <a href="#privacy-policy" class="hover:underline" data-i18n="footer_privacy_link">นโยบายความเป็นส่วนตัว</a>
           <span>|</span>
-          <a href="#" class="hover:underline">เงื่อนไขการสั่งสินค้า</a>
+          <a href="#order-terms" class="hover:underline" data-i18n="footer_terms_link">เงื่อนไขการสั่งสินค้า</a>
         </div>
       </div>
 
@@ -1300,7 +1335,7 @@
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="back-to-top" aria-label="กลับขึ้นด้านบน"
+  <button id="back-to-top" aria-label="กลับขึ้นด้านบน" data-i18n-attr="aria-label:back_to_top_label"
     class="fixed bottom-24 right-4 md:bottom-8 md:right-6 z-50 w-12 h-12 rounded-full bg-leaf text-ivory shadow-lg border border-gold/40 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-charcoal hover-scale">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
@@ -1316,11 +1351,11 @@
         <span class="text-xl mt-0.5 flex-shrink-0">🍪</span>
         <div>
           <p class="text-ivory font-semibold text-sm mb-0.5" data-i18n="cookie_title">นโยบายความเป็นส่วนตัว (PDPA)</p>
-          <p class="text-ivory/70 text-xs leading-relaxed" data-i18n="cookie_desc">
+          <p class="text-ivory/70 text-xs leading-relaxed" data-i18n-html="cookie_desc">
             เว็บไซต์นี้ใช้คุกกี้เพื่อพัฒนาประสบการณ์ใช้งานและวิเคราะห์สถิติ ตามมาตรฐาน
             <span class="text-gold font-semibold">พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA)</span>
             คุณสามารถเลือกยอมรับหรือปฏิเสธการใช้คุกกี้ได้
-            <a href="#" class="underline text-gold hover:text-white transition-colors ml-1">อ่านนโยบายเพิ่มเติม</a>
+            <a href="#privacy-policy" class="underline text-gold hover:text-white transition-colors ml-1">อ่านนโยบายเพิ่มเติม</a>
           </p>
         </div>
       </div>
