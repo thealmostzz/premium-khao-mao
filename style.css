@@ -67,6 +67,14 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: padding-box, border-box;
 }
 
+.premium-gold-border-leaf {
+  border-color: transparent;
+  background-image: linear-gradient(var(--color-leaf), var(--color-leaf)), 
+                    linear-gradient(135deg, #8B6A45 0%, #C9A45C 50%, #8B6A45 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
 @keyframes goldShimmer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
