@@ -614,3 +614,128 @@ function showToastNotification(eventName, eventParams) {
 window.trackCtaClick = function(channel, sectionName) {
   trackEvent(`click_${channel}_cta`, { section: sectionName });
 };
+
+// ─── Social Proof Counter (count-up animation) ───────────────────────────────
+function initCounters() {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+
+  const easeOutQuad = t => t * (2 - t);
+
+  const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const duration = 1800; // ms
+    const startTime = performance.now();
+
+    const step = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutQuad(progress);
+      el.textContent = Math.floor(easedProgress * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString();
+    };
+    requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.counted) {
+        entry.target.dataset.counted = 'true';
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach(counter => observer.observe(counter));
+}
+
+// ─── Back to Top Button ───────────────────────────────────────────────────────
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none');
+      btn.classList.remove('opacity-100');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    trackEvent('click_back_to_top', {});
+  });
+}
+
+// ─── Cookie Consent Banner (PDPA) ────────────────────────────────────────────
+function initCookieConsent() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+  if (!banner) return;
+
+  const CONSENT_KEY = 'khao_mao_cookie_consent';
+
+  // Only show if user hasn't decided yet
+  if (!localStorage.getItem(CONSENT_KEY)) {
+    setTimeout(() => {
+      banner.classList.remove('translate-y-full');
+      banner.classList.add('translate-y-0');
+    }, 1500);
+  }
+
+  const hideBanner = () => {
+    banner.classList.add('translate-y-full');
+    banner.classList.remove('translate-y-0');
+  };
+
+  acceptBtn && acceptBtn.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'accepted');
+    hideBanner();
+    trackEvent('cookie_consent', { decision: 'accepted' });
+  });
+
+  declineBtn && declineBtn.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'declined');
+    hideBanner();
+    trackEvent('cookie_consent', { decision: 'declined' });
+  });
+}
+
+// ─── Social Media Feed Tab Switcher ──────────────────────────────────────────
+window.showFeed = function(platform) {
+  const igFeed = document.getElementById('feed-instagram');
+  const ttFeed = document.getElementById('feed-tiktok');
+  const igTab = document.getElementById('tab-instagram');
+  const ttTab = document.getElementById('tab-tiktok');
+  if (!igFeed || !ttFeed) return;
+
+  if (platform === 'instagram') {
+    igFeed.classList.remove('hidden');
+    ttFeed.classList.add('hidden');
+    igTab.classList.add('bg-leaf', 'text-white', 'border-leaf');
+    igTab.classList.remove('bg-white', 'text-riceBrown', 'border-beige');
+    ttTab.classList.remove('bg-leaf', 'text-white', 'border-leaf');
+    ttTab.classList.add('bg-white', 'text-riceBrown', 'border-beige');
+  } else {
+    ttFeed.classList.remove('hidden');
+    igFeed.classList.add('hidden');
+    ttTab.classList.add('bg-leaf', 'text-white', 'border-leaf');
+    ttTab.classList.remove('bg-white', 'text-riceBrown', 'border-beige');
+    igTab.classList.remove('bg-leaf', 'text-white', 'border-leaf');
+    igTab.classList.add('bg-white', 'text-riceBrown', 'border-beige');
+  }
+  trackEvent('social_feed_tab_switch', { platform });
+};
+
+// ─── Register all new inits ───────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  initCounters();
+  initBackToTop();
+  initCookieConsent();
+});
