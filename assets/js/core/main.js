@@ -221,6 +221,29 @@ function getLocalizedContent(key) {
   return LOCALIZED_CONTENT[lang]?.[key] ?? LOCALIZED_CONTENT.th[key];
 }
 
+let revealObserver;
+
+function bindRevealAnimations(root = document) {
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+  }
+
+  const reveals = root.querySelectorAll(".reveal:not(.active)");
+  reveals.forEach(reveal => {
+    revealObserver.observe(reveal);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   renderReviews();
@@ -235,6 +258,7 @@ window.addEventListener("languagechange", () => {
   renderProducts();
   renderReviews();
   renderFAQs();
+  bindRevealAnimations(document.getElementById("faq"));
 });
 
 // --- Dynamic Rendering with Strict XSS Protection ---
@@ -452,6 +476,8 @@ function renderFAQs() {
 
     container.appendChild(item);
   });
+
+  bindRevealAnimations(container);
 }
 
 // --- Mobile Hamburger Menu ---
@@ -486,28 +512,12 @@ function initMobileMenu() {
 
 // --- Animate On Scroll (AOS) & Sticky CTA ---
 function initScrollEffects() {
-  const reveals = document.querySelectorAll(".reveal");
   const stickyCta = document.getElementById("sticky-line-cta");
   const backToTopBtn = document.getElementById("back-to-top");
   const sections = Array.from(document.querySelectorAll("section[id]"));
   const navLinks = Array.from(document.querySelectorAll("nav a"));
 
-  // IntersectionObserver for beautiful scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        observer.unobserve(entry.target); // Trigger only once
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  });
-
-  reveals.forEach(reveal => {
-    observer.observe(reveal);
-  });
+  bindRevealAnimations();
 
   const handleScroll = () => {
     // Show/Hide Mobile Sticky CTA (After scrolling down 400px)
