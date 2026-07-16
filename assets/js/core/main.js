@@ -91,23 +91,23 @@ const LOCALIZED_CONTENT = {
     faqs: [
       {
         question: "ข้าวเม่าของทางร้านสามารถเก็บไว้ได้นานกี่วัน?",
-        answer: "ข้าวเม่าคลุกสดบรรจุระบบสุญญากาศ เมื่อเก็บในตู้เย็นช่องปกติจะอยู่ได้ประมาณ 3-5 วัน และหากแช่แข็งในช่องฟรีซจะเก็บได้นานถึง 1 เดือนค่ะ แนะนำให้เปิดทานทันทีเมื่อเปิดบรรจุภัณฑ์เพื่อลิ้มรสสัมผัสที่ดีที่สุด ส่วนข้าวเม่าอบกรอบจะเก็บในอุณหภูมิห้องได้นาน 3 เดือนโดยไม่ต้องแช่เย็นค่ะ"
+        answer: "ข้าวเม่าคลุกสดบรรจุสุญญากาศ เก็บในตู้เย็นช่องปกติได้ประมาณ 3-5 วัน และหากแช่แข็งสามารถเก็บได้นานถึง 1 เดือนค่ะ ส่วนข้าวเม่าอบกรอบเก็บที่อุณหภูมิห้องได้นานประมาณ 3 เดือน เพื่อรสชาติที่ดีที่สุด แนะนำให้รับประทานหลังเปิดแพ็กไม่นาน หากต้องการเลือกเมนูให้เหมาะกับวันที่จะทาน ทัก LINE มาสอบถามได้เลยค่ะ"
       },
       {
-        question: "ถ้าต้องการซื้อเป็นของฝากต่างจังหวัด มีบริการขนส่งอย่างไร?",
-        answer: "ทางร้านบริการจัดส่งด้วยระบบขนส่งควบคุมอุณหภูมิแช่เย็น (Cool Express) ทั่วประเทศค่ะ ขนมจึงรักษาความสดใหม่และเย็นไปจนถึงมือผู้รับอย่างแน่นอน โดยคิดค่าบริการจัดส่งเหมาจ่ายตามจริง หรือส่งฟรีทันทีเมื่อมียอดสั่งซื้อครบ 1,200 บาทขึ้นไปค่ะ"
+        question: "ส่งต่างจังหวัดแล้วยังสดไหม?",
+        answer: "ทางร้านจัดส่งแบบควบคุมอุณหภูมิแช่เย็นทั่วประเทศ เพื่อช่วยรักษาความสด กลิ่นหอม และเนื้อสัมผัสของสินค้าให้ถึงมือผู้รับอย่างเหมาะสม ลูกค้าหลายจังหวัดนิยมสั่งเป็นของทานเองและของฝากค่ะ หากต้องการเช็กรอบส่งของวันนี้ สามารถทัก LINE ได้ทันที"
       },
       {
         question: "ต้องทำการสั่งออเดอร์ล่วงหน้าก่อนกี่วัน?",
-        answer: "สำหรับเมนูทั่วไป สั่งซื้อก่อน 12.00 น. จัดส่งในวันถัดไปได้ทันทีค่ะ ส่วนของขวัญพรีเมี่ยม (Premium Gift Set) แนะนำสั่งล่วงหน้า 1-2 วัน และหากเป็นออเดอร์องค์กรจำนวนมาก (Corporate Order) แนะนำติดต่อล่วงหน้า 5-7 วันทำการเพื่อทางร้านจะจัดทำแพ็กเกจจิ้งปั๊มโลโก้และคัดเลือกรวงข้าวที่ดีที่สุดอย่างประณีตค่ะ"
+        answer: "เมนูทั่วไปที่ไม่ใช่ออเดอร์ใหญ่ หากสั่งก่อนเวลาและคิวผลิตยังว่าง มักจัดส่งรอบถัดไปได้ค่ะ ส่วนชุดของฝากพรีเมี่ยมแนะนำสั่งล่วงหน้า 1-2 วัน และออเดอร์องค์กรหรือจำนวนมากแนะนำล่วงหน้า 5-7 วันทำการ เพื่อให้ร้านเตรียมสินค้าและแพ็กเกจได้เรียบร้อยที่สุด"
       },
       {
-        question: "มีแพ็กเกจจัดทำพิเศษสำหรับกลุ่มลูกค้าองค์กร (B2B) หรือไม่?",
-        answer: "มีบริการเต็มรูปแบบค่ะ ทางร้านรับออกแบบสายคาด ปั๊มฟอยล์เงิน/ทอง บนกล่องไม้สัก การ์ดอวยพรตราบริษัท รวมถึงบริการคัดจัดเซ็ตพิเศษตามงบประมาณขององค์กร สามารถติดต่อแจ้งรายละเอียดฝ่ายขาย B2B หรือทัก LINE เพื่อขอใบเสนอราคาอย่างเป็นทางการได้ทันทีค่ะ"
+        question: "เหมาะซื้อเป็นของฝากไหม?",
+        answer: "เหมาะมากค่ะ เพราะเป็นขนมไทยโบราณที่ดูมีเรื่องราว มีความประณีต และสามารถเลือกเป็นแบบทานเองหรือแบบชุดของฝากพรีเมี่ยมได้ เหมาะทั้งฝากผู้ใหญ่ คนในครอบครัว ลูกค้า และคู่ค้าทางธุรกิจ หากต้องการให้ช่วยแนะนำชุดที่เหมาะกับงบหรือโอกาสใช้งาน ทัก LINE มาได้เลยค่ะ"
       },
       {
-        question: "มีหน้าร้านให้เข้าไปเลือกซื้อสินค้าเองหรือไม่?",
-        answer: "ทางร้านมีครัวแฮนด์คราฟต์หน้าร้านหลักตั้งอยู่ที่จังหวัดนครราชสีมา ลูกค้าสามารถแวะเข้ามาทานสดๆ หรือมารับสินค้าได้ด้วยตนเองค่ะ เพื่อความสะดวกสูงสุด แนะนำทักแชทสั่งจองล่วงหน้าเพื่อจองคิวจัดทำไว้ก่อน จะได้ทานข้าวเม่าที่ทำสดขึ้นจากเตาร้อนๆ พอดีเวลาค่ะ"
+        question: "สั่งซื้อผ่าน LINE ต้องแจ้งอะไรบ้าง?",
+        answer: "แจ้งเมนูที่สนใจ จำนวนที่ต้องการ วันที่อยากได้รับสินค้า และจังหวัดปลายทางได้เลยค่ะ หากยังไม่แน่ใจว่าจะเลือกเมนูไหนดี สามารถบอกงบหรือบอกว่าอยากซื้อทานเอง ซื้อฝาก หรือซื้อเป็นของขวัญ ทางร้านจะช่วยแนะนำให้เหมาะที่สุด"
       }
     ]
   },
@@ -191,23 +191,23 @@ const LOCALIZED_CONTENT = {
     faqs: [
       {
         question: "How long can your khao mao be stored?",
-        answer: "Fresh mixed khao mao in vacuum packaging keeps for about 3 to 5 days in the refrigerator and up to 1 month in the freezer. Crispy khao mao can be stored at room temperature for up to 3 months."
+        answer: "Fresh mixed khao mao is vacuum-packed and keeps for about 3 to 5 days in the refrigerator, or up to 1 month in the freezer. Crispy khao mao can be stored at room temperature for around 3 months. For the best taste and texture, we recommend enjoying it soon after opening. If you want help choosing a menu for your preferred serving date, feel free to message us on LINE."
       },
       {
-        question: "Do you offer delivery for gifts outside the province?",
-        answer: "Yes. We ship nationwide with chilled temperature-controlled delivery to keep the dessert fresh until it reaches the recipient. Shipping is charged at cost, or free for orders over THB 1,200."
+        question: "Will the product stay fresh for out-of-province delivery?",
+        answer: "Yes. We ship nationwide with chilled temperature-controlled delivery to help preserve freshness, aroma, and texture until the order reaches the recipient. Many customers in other provinces order both for themselves and as gifts. If you would like to check today's shipping round, you can contact us on LINE anytime."
       },
       {
         question: "How many days in advance should I place an order?",
-        answer: "For regular menu items, orders placed before noon can usually be shipped the next day. Premium gift sets are best ordered 1 to 2 days ahead, while large corporate orders should be discussed 5 to 7 business days in advance."
+        answer: "For regular menu items, if you order within business hours and the production queue is still available, we can usually ship in the next round. Premium gift sets are best ordered 1 to 2 days ahead, while corporate or large-volume orders should be placed 5 to 7 business days in advance so we can prepare both the products and packaging properly."
       },
       {
-        question: "Do you offer tailored packages for B2B clients?",
-        answer: "Yes. We provide full-service corporate gifting, including belly bands, gold or silver foil stamping, branded greeting cards, and curated assortments based on your budget."
+        question: "Is it suitable as a gift?",
+        answer: "Very much so. Our khao mao is a refined traditional Thai dessert with a strong sense of story and craftsmanship. You can choose from everyday treats or premium gift sets, making it suitable for elders, family, clients, and business partners. If you would like help choosing a set for your budget or occasion, message us on LINE and we will gladly recommend one."
       },
       {
-        question: "Do you have a physical storefront?",
-        answer: "Yes. Our main handcrafted kitchen is in Nakhon Ratchasima. Customers are welcome to visit for pickup or to enjoy freshly made khao mao, though pre-ordering is recommended."
+        question: "What should I send when ordering through LINE?",
+        answer: "You can send us the menu items you are interested in, the quantity, your preferred delivery date, and the destination province. If you are unsure what to choose, simply tell us your budget or whether the order is for personal enjoyment, gifting, or a special present, and we will help recommend the best option."
       }
     ]
   }
@@ -249,6 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   renderReviews();
   renderFAQs();
+  initQuickOrderForm();
   initMobileMenu();
   initScrollEffects();
   initReviewsCarousel();
@@ -259,6 +260,8 @@ window.addEventListener("languagechange", () => {
   renderProducts();
   renderReviews();
   renderFAQs();
+  renderQuickOrderProductOptions();
+  syncQuickOrderConditionalFields();
   bindRevealAnimations(document.getElementById("faq"));
 });
 
@@ -479,6 +482,248 @@ function renderFAQs() {
   });
 
   bindRevealAnimations(container);
+}
+
+const QUICK_ORDER_LINE_URL = "https://line.me/ti/p/~peeradet22";
+const QUICK_ORDER_ERROR_FIELD_IDS = {
+  product: "quick-order-product-error",
+  customProduct: "quick-order-custom-product-error",
+  quantity: "quick-order-quantity-error",
+  budgetRange: "quick-order-budget-range-error",
+  deliveryNeed: "quick-order-delivery-need-error",
+  deliveryDate: "quick-order-delivery-date-error"
+};
+
+let quickOrderVisibilitySync = null;
+
+function getTodayIsoDate() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function getQuickOrderTranslation(key) {
+  if (typeof window.getTextTranslation === "function") {
+    return window.getTextTranslation(getCurrentLang(), key);
+  }
+  return "";
+}
+
+function getQuickOrderProductOptions() {
+  const products = getLocalizedContent("products")
+    .filter((product) => product.id !== "corporate-gift-box")
+    .map((product) => ({
+      value: product.id,
+      label: product.name
+    }));
+
+  products.push({
+    value: "other",
+    label: getQuickOrderTranslation("quick_order_product_other") || "อื่นๆ"
+  });
+
+  return products;
+}
+
+function renderQuickOrderProductOptions() {
+  const productSelect = document.getElementById("quick-order-product");
+  if (!productSelect) return;
+
+  const selectedValue = productSelect.value;
+  const placeholder = getQuickOrderTranslation("quick_order_select_placeholder") || "เลือกข้อมูล";
+
+  productSelect.innerHTML = "";
+
+  const placeholderOption = document.createElement("option");
+  placeholderOption.value = "";
+  placeholderOption.textContent = placeholder;
+  productSelect.appendChild(placeholderOption);
+
+  getQuickOrderProductOptions().forEach((option) => {
+    const optionEl = document.createElement("option");
+    optionEl.value = option.value;
+    optionEl.textContent = option.label;
+    optionEl.selected = option.value === selectedValue;
+    productSelect.appendChild(optionEl);
+  });
+}
+
+function formatQuickOrderQuantityLabel(value, lang) {
+  if (!value) return "";
+  if (lang === "en") {
+    return value === "1" ? "1 item" : `${value} items`;
+  }
+  return `${value} กล่อง`;
+}
+
+function getQuickOrderValidationConfig() {
+  return {
+    fieldNames: {
+      product: getQuickOrderTranslation("quick_order_product_label") || "สินค้า",
+      customProduct: getQuickOrderTranslation("quick_order_custom_product_label") || "รายละเอียดสินค้าเพิ่มเติม",
+      budgetRange: getQuickOrderTranslation("quick_order_budget_range_label") || "ช่วงงบประมาณ"
+    },
+    messages: {
+      selectPrefix: getQuickOrderTranslation("quick_order_error_select_prefix") || "กรุณาเลือก",
+      specifyPrefix: getQuickOrderTranslation("quick_order_error_specify_prefix") || "กรุณาระบุ",
+      quantityMin: getQuickOrderTranslation("quick_order_error_quantity_min") || "กรุณาเลือกจำนวนอย่างน้อย 1",
+      pastDate: getQuickOrderTranslation("quick_order_error_past_date") || "กรุณาเลือกวันที่ที่ไม่ย้อนหลัง"
+    }
+  };
+}
+
+function clearQuickOrderErrors(form) {
+  form.querySelectorAll(".quick-order-error").forEach((errorEl) => {
+    errorEl.textContent = "";
+    errorEl.classList.add("hidden");
+  });
+
+  form.querySelectorAll(".quick-order-input").forEach((input) => {
+    input.classList.remove("is-invalid");
+    input.setAttribute("aria-invalid", "false");
+  });
+}
+
+function showQuickOrderErrors(form, errors) {
+  Object.entries(errors).forEach(([fieldName, message]) => {
+    const input = form.querySelector(`[name="${fieldName}"]`);
+    const errorId = QUICK_ORDER_ERROR_FIELD_IDS[fieldName];
+    const errorEl = errorId ? document.getElementById(errorId) : null;
+
+    if (input) {
+      input.classList.add("is-invalid");
+      input.setAttribute("aria-invalid", "true");
+    }
+
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.classList.remove("hidden");
+    }
+  });
+}
+
+function syncQuickOrderConditionalFields() {
+  if (typeof quickOrderVisibilitySync === "function") {
+    quickOrderVisibilitySync();
+  }
+}
+
+function initQuickOrderForm() {
+  const form = document.getElementById("quick-order-form");
+  const quickOrder = window.PremiumKhaoMaoQuickOrder;
+  if (!form || !quickOrder) return;
+
+  const productSelect = document.getElementById("quick-order-product");
+  const customProductWrap = document.getElementById("quick-order-custom-product-wrap");
+  const customProductInput = document.getElementById("quick-order-custom-product");
+  const quantitySelect = document.getElementById("quick-order-quantity");
+  const budgetRangeSelect = document.getElementById("quick-order-budget-range");
+  const budgetValueInput = document.getElementById("quick-order-budget-value");
+  const deliveryNeedSelect = document.getElementById("quick-order-delivery-need");
+  const deliveryDateWrap = document.getElementById("quick-order-delivery-date-wrap");
+  const deliveryDateInput = document.getElementById("quick-order-delivery-date");
+  const summaryError = document.getElementById("quick-order-form-summary-error");
+
+  if (!productSelect || !customProductWrap || !customProductInput || !quantitySelect || !budgetRangeSelect ||
+      !budgetValueInput || !deliveryNeedSelect || !deliveryDateWrap || !deliveryDateInput || !summaryError) {
+    return;
+  }
+
+  const syncVisibility = () => {
+    const showCustomProduct = productSelect.value === "other";
+    customProductWrap.classList.toggle("hidden", !showCustomProduct);
+    customProductInput.toggleAttribute("disabled", !showCustomProduct);
+
+    const showDeliveryDate = deliveryNeedSelect.value === "custom-date";
+    deliveryDateWrap.classList.toggle("hidden", !showDeliveryDate);
+    deliveryDateInput.toggleAttribute("disabled", !showDeliveryDate);
+
+    if (!showCustomProduct) {
+      customProductInput.value = "";
+    }
+
+    if (!showDeliveryDate) {
+      deliveryDateInput.value = "";
+    }
+  };
+
+  quickOrderVisibilitySync = syncVisibility;
+
+  renderQuickOrderProductOptions();
+  deliveryDateInput.min = getTodayIsoDate();
+  syncVisibility();
+
+  productSelect.addEventListener("change", syncVisibility);
+  deliveryNeedSelect.addEventListener("change", syncVisibility);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearQuickOrderErrors(form);
+
+    const lang = getCurrentLang();
+    const validationConfig = getQuickOrderValidationConfig();
+    const formData = new FormData(form);
+    const values = {
+      product: String(formData.get("product") || ""),
+      customProduct: String(formData.get("customProduct") || ""),
+      quantity: String(formData.get("quantity") || ""),
+      budgetRange: String(formData.get("budgetRange") || ""),
+      budgetValue: String(formData.get("budgetValue") || ""),
+      deliveryNeed: String(formData.get("deliveryNeed") || ""),
+      deliveryDate: String(formData.get("deliveryDate") || "")
+    };
+
+    const validation = quickOrder.validateQuickOrder(values, {
+      today: getTodayIsoDate(),
+      fieldNames: validationConfig.fieldNames,
+      messages: validationConfig.messages
+    });
+
+    if (!validation.isValid) {
+      showQuickOrderErrors(form, validation.errors);
+      summaryError.textContent = getQuickOrderTranslation("quick_order_summary_error") || "กรุณาตรวจสอบข้อมูลที่ยังไม่ครบก่อนส่ง";
+      summaryError.classList.remove("hidden");
+      trackEvent("quick_order_validation_error", {
+        fields: Object.keys(validation.errors).join(","),
+        language: lang
+      });
+      return;
+    }
+
+    const productLabel = productSelect.options[productSelect.selectedIndex]?.textContent || "";
+    const budgetRangeLabel = budgetRangeSelect.options[budgetRangeSelect.selectedIndex]?.textContent || "";
+    const deliveryNeedLabel = deliveryNeedSelect.options[deliveryNeedSelect.selectedIndex]?.textContent || "";
+    const deliveryDateLabel = quickOrder.formatDeliveryDate(values.deliveryDate, lang);
+    const message = quickOrder.buildLineMessage({
+      greeting: getQuickOrderTranslation("quick_order_message_greeting"),
+      budgetValueSuffix: lang === "en" ? " THB" : " บาท",
+      labels: {
+        product: getQuickOrderTranslation("quick_order_message_product"),
+        customProduct: getQuickOrderTranslation("quick_order_message_custom_product"),
+        quantity: getQuickOrderTranslation("quick_order_message_quantity"),
+        budgetRange: getQuickOrderTranslation("quick_order_message_budget_range"),
+        budgetValue: getQuickOrderTranslation("quick_order_message_budget_value"),
+        deliveryNeed: getQuickOrderTranslation("quick_order_message_delivery_need"),
+        closing: getQuickOrderTranslation("quick_order_message_closing")
+      },
+      values: {
+        productLabel,
+        customProduct: values.customProduct,
+        quantityLabel: formatQuickOrderQuantityLabel(values.quantity, lang),
+        budgetRangeLabel,
+        budgetValue: values.budgetValue,
+        deliveryNeedValue: values.deliveryNeed,
+        deliveryNeedLabel,
+        deliveryDateLabel
+      }
+    });
+
+    const lineUrl = quickOrder.buildLineUrl(QUICK_ORDER_LINE_URL, message);
+    trackEvent("click_line_cta", { section: "quick_order_form" });
+    window.open(lineUrl, "_blank", "noopener,noreferrer");
+  });
 }
 
 // --- Mobile Hamburger Menu ---

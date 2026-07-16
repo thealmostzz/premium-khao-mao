@@ -207,6 +207,8 @@
               <a href="#giftset"
                  onclick="trackEvent('click_gift_set_cta', { section: 'hero_secondary' })"
                  class="inline-flex items-center justify-center rounded-full border-2 border-leaf px-8 py-4 text-base font-bold text-leaf bg-white hover:bg-leaf hover:text-white transition-all hover-scale"
+                 hidden
+                 style="display: none"
                  data-i18n="hero_cta2">
                 ดูชุดของฝากพรีเมี่ยม
               </a>
@@ -228,7 +230,7 @@
 
               <!-- Hero product image -->
               <div class="w-full h-full rounded-2xl overflow-hidden relative border border-beige">
-                <img src="assets/images/hero_khao_mao.jpg?v=20260705-2" alt="ข้าวเม่าคลุกมะพร้าวอ่อนสูตรสดใหม่" data-i18n-attr="alt:hero_image_alt" class="w-full h-full object-cover" loading="eager">
+                <img src="assets/images/hero_khao_mao.jpg?v=20260705-3" alt="ข้าวเม่าคลุกมะพร้าวอ่อนสูตรสดใหม่" data-i18n-attr="alt:hero_image_alt" class="w-full h-full object-cover" loading="eager">
                 <!-- Overlay gradient for readability -->
                 <div class="absolute inset-0 bg-gradient-to-t from-leaf/60 via-transparent to-transparent"></div>
                 <!-- Bottom text overlay -->
@@ -380,7 +382,7 @@
     </section>
 
     <!-- 6. Premium Gift Set Section -->
-    <section id="giftset" class="py-16 sm:py-24 bg-ivory relative border-y border-beige overflow-hidden">
+    <section id="giftset" class="py-16 sm:py-24 bg-ivory relative border-y border-beige overflow-hidden" hidden>
       <!-- Decorator leaf -->
       <div class="absolute -right-32 bottom-0 w-80 h-80 bg-riceGreen/10 rounded-full blur-3xl z-0"></div>
 
@@ -734,7 +736,7 @@
           <!-- Image 1 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
-              src="assets/images/hero_khao_mao.jpg?v=20260705-2"
+              src="assets/images/hero_khao_mao.jpg?v=20260705-3"
               alt="ข้าวเม่าคลุกมะพร้าวอ่อน" data-i18n-attr="alt:gallery_1_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
@@ -1197,6 +1199,79 @@
           คัดสวรรวัตถุดิบคุณภาพ คั่วใหม่สดวันต่อวัน บรรจุระบบถนอมล็อกกลิ่นเพื่อส่งมอบรสชาติขนมไทยโบราณที่ประณีตที่สุด สั่งเลยวันนี้เพื่อสิทธิการจัดส่งแช่เย็นฟรีทั่วไทย
         </p>
 
+        <form id="quick-order-form" class="quick-order-shell mx-auto w-full max-w-4xl text-left" novalidate>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+              <label for="quick-order-product" class="quick-order-label" data-i18n="quick_order_product_label">สินค้า</label>
+              <select id="quick-order-product" name="product" class="quick-order-input" aria-describedby="quick-order-product-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+              </select>
+              <p id="quick-order-product-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div id="quick-order-custom-product-wrap" class="hidden">
+              <label for="quick-order-custom-product" class="quick-order-label" data-i18n="quick_order_custom_product_label">รายละเอียดสินค้าเพิ่มเติม</label>
+              <input id="quick-order-custom-product" name="customProduct" type="text" maxlength="120" class="quick-order-input" aria-describedby="quick-order-custom-product-error" data-i18n-attr="placeholder:quick_order_custom_product_placeholder">
+              <p id="quick-order-custom-product-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <label for="quick-order-quantity" class="quick-order-label" data-i18n="quick_order_quantity_label">จำนวน</label>
+              <select id="quick-order-quantity" name="quantity" class="quick-order-input" aria-describedby="quick-order-quantity-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10+</option>
+              </select>
+              <p id="quick-order-quantity-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <label for="quick-order-budget-range" class="quick-order-label" data-i18n="quick_order_budget_range_label">ช่วงงบประมาณ</label>
+              <select id="quick-order-budget-range" name="budgetRange" class="quick-order-input" aria-describedby="quick-order-budget-range-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+                <option value="under-500" data-i18n="quick_order_budget_under_500">ต่ำกว่า 500 บาท</option>
+                <option value="500-1000" data-i18n="quick_order_budget_500_1000">500-1,000 บาท</option>
+                <option value="1000-2000" data-i18n="quick_order_budget_1000_2000">1,000-2,000 บาท</option>
+                <option value="over-2000" data-i18n="quick_order_budget_over_2000">มากกว่า 2,000 บาท</option>
+              </select>
+              <p id="quick-order-budget-range-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <label for="quick-order-budget-value" class="quick-order-label" data-i18n="quick_order_budget_value_label">งบที่ต้องการระบุ</label>
+              <input id="quick-order-budget-value" name="budgetValue" type="number" min="0" inputmode="numeric" class="quick-order-input" data-i18n-attr="placeholder:quick_order_budget_value_placeholder">
+            </div>
+
+            <div>
+              <label for="quick-order-delivery-need" class="quick-order-label" data-i18n="quick_order_delivery_need_label">ช่วงเวลาที่ต้องการรับ</label>
+              <select id="quick-order-delivery-need" name="deliveryNeed" class="quick-order-input" aria-describedby="quick-order-delivery-need-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+                <option value="urgent" data-i18n="quick_order_delivery_urgent">ด่วนที่สุด</option>
+                <option value="2-3-days" data-i18n="quick_order_delivery_2_3_days">ภายใน 2-3 วัน</option>
+                <option value="1-week" data-i18n="quick_order_delivery_1_week">ภายใน 1 สัปดาห์</option>
+                <option value="custom-date" data-i18n="quick_order_delivery_custom_date">ระบุวันที่เอง</option>
+              </select>
+              <p id="quick-order-delivery-need-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div id="quick-order-delivery-date-wrap" class="hidden md:col-span-2">
+              <label for="quick-order-delivery-date" class="quick-order-label" data-i18n="quick_order_delivery_date_label">วันที่ต้องการรับ</label>
+              <input id="quick-order-delivery-date" name="deliveryDate" type="date" class="quick-order-input" aria-describedby="quick-order-delivery-date-error">
+              <p id="quick-order-delivery-date-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <p id="quick-order-form-summary-error" class="quick-order-error mt-4 hidden" data-i18n="quick_order_summary_error" role="alert" aria-live="polite">กรุณาตรวจสอบข้อมูลที่ยังไม่ครบก่อนส่ง</p>
+          <div class="mt-4 flex justify-center">
+            <button id="quick-order-submit" type="submit" class="inline-flex items-center justify-center rounded-full border border-gold bg-ivory px-8 py-3 text-sm font-bold text-leaf transition-all hover:bg-white hover-scale" data-i18n="quick_order_submit">
+              ส่งรายละเอียดไปทาง LINE
+            </button>
+          </div>
+        </form>
+
         <div class="pt-4 flex flex-col items-center gap-4">
           <a href="https://line.me/ti/p/~peeradet22" target="_blank" rel="noopener noreferrer"
              onclick="trackCtaClick('line', 'final_cta')"
@@ -1338,6 +1413,7 @@
   </div>
 
   <script src="assets/js/i18n/translations.js"></script>
+  <script src="assets/js/core/quick-order.js"></script>
   <script src="assets/js/core/main.js"></script>
 </body>
 </html>

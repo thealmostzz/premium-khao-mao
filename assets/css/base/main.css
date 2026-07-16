@@ -197,6 +197,51 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: auto;
 }
 
+.quick-order-shell {
+  margin-top: 2rem;
+  border: 1px solid rgba(231, 216, 194, 0.28);
+  border-radius: 1.75rem;
+  background: rgba(255, 253, 248, 0.08);
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.quick-order-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-ivory);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.quick-order-input {
+  width: 100%;
+  min-height: 3rem;
+  border: 1px solid rgba(231, 216, 194, 0.35);
+  border-radius: 9999px;
+  background: rgba(255, 253, 248, 0.96);
+  color: var(--color-charcoal);
+  padding: 0.8rem 1rem;
+}
+
+.quick-order-input:focus {
+  outline: 2px solid rgba(201, 164, 92, 0.6);
+  outline-offset: 2px;
+  border-color: rgba(201, 164, 92, 0.8);
+}
+
+.quick-order-error {
+  color: #FDE68A;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.quick-order-input.is-invalid {
+  border-color: #F59E0B;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
+}
+
 /* Safe Area Padding for iOS Devices */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .pb-safe {
