@@ -1084,27 +1084,19 @@ function initCookieConsent() {
 
 // ─── Social Media Feed Tab Switcher ──────────────────────────────────────────
 window.showFeed = function(platform) {
-  const igFeed = document.getElementById('feed-instagram');
-  const ttFeed = document.getElementById('feed-tiktok');
-  const igTab = document.getElementById('tab-instagram');
-  const ttTab = document.getElementById('tab-tiktok');
-  if (!igFeed || !ttFeed) return;
+  const selectedFeed = document.getElementById(`feed-${platform}`);
+  const selectedTab = document.getElementById(`tab-${platform}`);
+  if (!selectedFeed || !selectedTab) return;
 
-  if (platform === 'instagram') {
-    igFeed.classList.remove('hidden');
-    ttFeed.classList.add('hidden');
-    igTab.classList.add('bg-leaf', 'text-white', 'border-leaf');
-    igTab.classList.remove('bg-white', 'text-riceBrown', 'border-beige');
-    ttTab.classList.remove('bg-leaf', 'text-white', 'border-leaf');
-    ttTab.classList.add('bg-white', 'text-riceBrown', 'border-beige');
-  } else {
-    ttFeed.classList.remove('hidden');
-    igFeed.classList.add('hidden');
-    ttTab.classList.add('bg-leaf', 'text-white', 'border-leaf');
-    ttTab.classList.remove('bg-white', 'text-riceBrown', 'border-beige');
-    igTab.classList.remove('bg-leaf', 'text-white', 'border-leaf');
-    igTab.classList.add('bg-white', 'text-riceBrown', 'border-beige');
-  }
+  document.querySelectorAll('[id^="feed-"]').forEach((feed) => feed.classList.add('hidden'));
+  document.querySelectorAll('.social-tab-btn').forEach((tab) => {
+    tab.classList.remove('bg-leaf', 'text-white', 'border-leaf');
+    tab.classList.add('bg-white', 'text-riceBrown', 'border-beige');
+  });
+
+  selectedFeed.classList.remove('hidden');
+  selectedTab.classList.add('bg-leaf', 'text-white', 'border-leaf');
+  selectedTab.classList.remove('bg-white', 'text-riceBrown', 'border-beige');
   trackEvent('social_feed_tab_switch', { platform });
 };
 
