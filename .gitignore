@@ -9,3 +9,4 @@ Desktop.ini
 # Node/Tailwind build outputs
 node_modules/
 dist/
+.worktrees/
