@@ -207,6 +207,8 @@
               <a href="#giftset"
                  onclick="trackEvent('click_gift_set_cta', { section: 'hero_secondary' })"
                  class="inline-flex items-center justify-center rounded-full border-2 border-leaf px-8 py-4 text-base font-bold text-leaf bg-white hover:bg-leaf hover:text-white transition-all hover-scale"
+                 hidden
+                 style="display: none"
                  data-i18n="hero_cta2">
                 ดูชุดของฝากพรีเมี่ยม
               </a>
@@ -228,7 +230,7 @@
 
               <!-- Hero product image -->
               <div class="w-full h-full rounded-2xl overflow-hidden relative border border-beige">
-                <img src="assets/images/hero_khao_mao.jpg?v=20260705-2" alt="ข้าวเม่าคลุกมะพร้าวอ่อนสูตรสดใหม่" data-i18n-attr="alt:hero_image_alt" class="w-full h-full object-cover" loading="eager">
+                <img src="assets/images/hero_khao_mao.jpg?v=20260705-3" alt="ข้าวเม่าคลุกมะพร้าวอ่อนสูตรสดใหม่" data-i18n-attr="alt:hero_image_alt" class="w-full h-full object-cover" loading="eager">
                 <!-- Overlay gradient for readability -->
                 <div class="absolute inset-0 bg-gradient-to-t from-leaf/60 via-transparent to-transparent"></div>
                 <!-- Bottom text overlay -->
@@ -380,7 +382,7 @@
     </section>
 
     <!-- 6. Premium Gift Set Section -->
-    <section id="giftset" class="py-16 sm:py-24 bg-ivory relative border-y border-beige overflow-hidden">
+    <section id="giftset" class="py-16 sm:py-24 bg-ivory relative border-y border-beige overflow-hidden" hidden>
       <!-- Decorator leaf -->
       <div class="absolute -right-32 bottom-0 w-80 h-80 bg-riceGreen/10 rounded-full blur-3xl z-0"></div>
 
@@ -734,7 +736,7 @@
           <!-- Image 1 -->
           <div class="aspect-square bg-ivory rounded-2xl overflow-hidden border border-beige hover-scale relative group shadow-sm cursor-pointer reveal">
             <img
-              src="assets/images/hero_khao_mao.jpg?v=20260705-2"
+              src="assets/images/hero_khao_mao.jpg?v=20260705-3"
               alt="ข้าวเม่าคลุกมะพร้าวอ่อน" data-i18n-attr="alt:gallery_1_label"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
@@ -827,7 +829,7 @@
         </div>
 
         <!-- Platform Tabs -->
-        <div class="flex justify-center gap-3 mb-8 reveal">
+        <div class="flex flex-wrap justify-center gap-3 mb-8 reveal">
           <button onclick="showFeed('instagram')" id="tab-instagram"
             class="social-tab-btn flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold border-2 border-leaf bg-leaf text-white transition-all">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -837,6 +839,11 @@
             class="social-tab-btn flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold border-2 border-beige bg-white text-riceBrown transition-all hover:border-leaf hover:text-leaf">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.86a8.27 8.27 0 004.84 1.55V6.96a4.85 4.85 0 01-1.07-.27z"/></svg>
             <span data-i18n="social_tab_tiktok">TikTok</span>
+          </button>
+          <button onclick="showFeed('facebook')" id="tab-facebook"
+            class="social-tab-btn flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold border-2 border-beige bg-white text-riceBrown transition-all hover:border-leaf hover:text-leaf">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.026 4.388 11.021 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.49 0-1.956.931-1.956 1.887v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.099 24 12.073z"/></svg>
+            <span>Facebook</span>
           </button>
         </div>
 
@@ -980,6 +987,16 @@
           </a>
         </div>
 
+        <!-- Facebook Feed Placeholder (hidden by default until a page URL is available) -->
+        <div id="feed-facebook" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 reveal">
+          <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer"><img src="assets/images/khao_mao_kluk.jpg?v=20260705-2" alt="Facebook: ข้าวเม่าคลุก" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"><span class="absolute top-2 right-2 bg-leaf text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Facebook</span></a>
+          <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer"><img src="assets/images/khao_mao_tod.jpg?v=20260705-2" alt="Facebook: ข้าวเม่าทอด" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"><span class="absolute top-2 right-2 bg-leaf text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Facebook</span></a>
+          <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer"><img src="assets/images/premium_gift_set.jpg?v=20260705-2" alt="Facebook: ข้าวเม่ารางแพ็กพร้อมส่ง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"><span class="absolute top-2 right-2 bg-leaf text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Facebook</span></a>
+          <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer"><img src="assets/images/khao_mao_rang.jpg?v=20260705-2" alt="Facebook: ข้าวเม่าราง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"><span class="absolute top-2 right-2 bg-leaf text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Facebook</span></a>
+          <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer"><img src="assets/images/corporate_gift_box.jpg?v=20260705-2" alt="Facebook: ชุดของขวัญข้าวเม่า" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"><span class="absolute top-2 right-2 bg-leaf text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Facebook</span></a>
+          <a href="#" onclick="return false;" class="group relative aspect-square rounded-xl overflow-hidden border border-beige shadow-sm cursor-pointer"><img src="assets/images/crispy_khao_mao.jpg?v=20260705-2" alt="Facebook: ข้าวเม่าอบกรอบ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"><span class="absolute top-2 right-2 bg-leaf text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Facebook</span></a>
+        </div>
+
         <!-- Follow CTA -->
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10 reveal">
           <a href="#" onclick="return false;"
@@ -991,6 +1008,11 @@
              class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-charcoal text-white font-bold text-sm hover:bg-black transition-all hover-scale">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.86a8.27 8.27 0 004.84 1.55V6.96a4.85 4.85 0 01-1.07-.27z"/></svg>
             <span data-i18n="social_follow_tiktok">ติดตาม TikTok</span>
+          </a>
+          <a href="#" onclick="return false;"
+             class="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-leaf text-leaf font-bold text-sm hover:bg-leaf hover:text-white transition-all hover-scale">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.026 4.388 11.021 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.49 0-1.956.931-1.956 1.887v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.099 24 12.073z"/></svg>
+            <span>ติดตาม Facebook</span>
           </a>
         </div>
 
@@ -1197,6 +1219,79 @@
           คัดสวรรวัตถุดิบคุณภาพ คั่วใหม่สดวันต่อวัน บรรจุระบบถนอมล็อกกลิ่นเพื่อส่งมอบรสชาติขนมไทยโบราณที่ประณีตที่สุด สั่งเลยวันนี้เพื่อสิทธิการจัดส่งแช่เย็นฟรีทั่วไทย
         </p>
 
+        <form id="quick-order-form" class="quick-order-shell mx-auto w-full max-w-4xl text-left" novalidate>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+              <label for="quick-order-product" class="quick-order-label" data-i18n="quick_order_product_label">สินค้า</label>
+              <select id="quick-order-product" name="product" class="quick-order-input" aria-describedby="quick-order-product-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+              </select>
+              <p id="quick-order-product-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div id="quick-order-custom-product-wrap" class="hidden">
+              <label for="quick-order-custom-product" class="quick-order-label" data-i18n="quick_order_custom_product_label">รายละเอียดสินค้าเพิ่มเติม</label>
+              <input id="quick-order-custom-product" name="customProduct" type="text" maxlength="120" class="quick-order-input" aria-describedby="quick-order-custom-product-error" data-i18n-attr="placeholder:quick_order_custom_product_placeholder">
+              <p id="quick-order-custom-product-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <label for="quick-order-quantity" class="quick-order-label" data-i18n="quick_order_quantity_label">จำนวน</label>
+              <select id="quick-order-quantity" name="quantity" class="quick-order-input" aria-describedby="quick-order-quantity-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10+</option>
+              </select>
+              <p id="quick-order-quantity-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <label for="quick-order-budget-range" class="quick-order-label" data-i18n="quick_order_budget_range_label">ช่วงงบประมาณ</label>
+              <select id="quick-order-budget-range" name="budgetRange" class="quick-order-input" aria-describedby="quick-order-budget-range-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+                <option value="under-500" data-i18n="quick_order_budget_under_500">ต่ำกว่า 500 บาท</option>
+                <option value="500-1000" data-i18n="quick_order_budget_500_1000">500-1,000 บาท</option>
+                <option value="1000-2000" data-i18n="quick_order_budget_1000_2000">1,000-2,000 บาท</option>
+                <option value="over-2000" data-i18n="quick_order_budget_over_2000">มากกว่า 2,000 บาท</option>
+              </select>
+              <p id="quick-order-budget-range-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <label for="quick-order-budget-value" class="quick-order-label" data-i18n="quick_order_budget_value_label">งบที่ต้องการระบุ</label>
+              <input id="quick-order-budget-value" name="budgetValue" type="number" min="0" inputmode="numeric" class="quick-order-input" data-i18n-attr="placeholder:quick_order_budget_value_placeholder">
+            </div>
+
+            <div>
+              <label for="quick-order-delivery-need" class="quick-order-label" data-i18n="quick_order_delivery_need_label">ช่วงเวลาที่ต้องการรับ</label>
+              <select id="quick-order-delivery-need" name="deliveryNeed" class="quick-order-input" aria-describedby="quick-order-delivery-need-error">
+                <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
+                <option value="urgent" data-i18n="quick_order_delivery_urgent">ด่วนที่สุด</option>
+                <option value="2-3-days" data-i18n="quick_order_delivery_2_3_days">ภายใน 2-3 วัน</option>
+                <option value="1-week" data-i18n="quick_order_delivery_1_week">ภายใน 1 สัปดาห์</option>
+                <option value="custom-date" data-i18n="quick_order_delivery_custom_date">ระบุวันที่เอง</option>
+              </select>
+              <p id="quick-order-delivery-need-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+
+            <div id="quick-order-delivery-date-wrap" class="hidden md:col-span-2">
+              <label for="quick-order-delivery-date" class="quick-order-label" data-i18n="quick_order_delivery_date_label">วันที่ต้องการรับ</label>
+              <input id="quick-order-delivery-date" name="deliveryDate" type="date" class="quick-order-input" aria-describedby="quick-order-delivery-date-error">
+              <p id="quick-order-delivery-date-error" class="quick-order-error hidden" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <p id="quick-order-form-summary-error" class="quick-order-error mt-4 hidden" data-i18n="quick_order_summary_error" role="alert" aria-live="polite">กรุณาตรวจสอบข้อมูลที่ยังไม่ครบก่อนส่ง</p>
+          <div class="mt-4 flex justify-center">
+            <button id="quick-order-submit" type="submit" class="inline-flex items-center justify-center rounded-full border border-gold bg-ivory px-8 py-3 text-sm font-bold text-leaf transition-all hover:bg-white hover-scale" data-i18n="quick_order_submit">
+              ส่งรายละเอียดไปทาง LINE
+            </button>
+          </div>
+        </form>
+
         <div class="pt-4 flex flex-col items-center gap-4">
           <a href="https://line.me/ti/p/~peeradet22" target="_blank" rel="noopener noreferrer"
              onclick="trackCtaClick('line', 'final_cta')"
@@ -1338,6 +1433,7 @@
   </div>
 
   <script src="assets/js/i18n/translations.js"></script>
+  <script src="assets/js/core/quick-order.js"></script>
   <script src="assets/js/core/main.js"></script>
 </body>
 </html>
