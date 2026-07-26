@@ -1225,7 +1225,7 @@
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
               <label for="quick-order-product" class="quick-order-label" data-i18n="quick_order_product_label">สินค้า</label>
-              <select id="quick-order-product" name="product" class="quick-order-input" aria-describedby="quick-order-product-error">
+              <select id="quick-order-product" name="product" class="quick-order-input" data-custom-dropdown aria-describedby="quick-order-product-error">
                 <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
               </select>
               <p id="quick-order-product-error" class="quick-order-error hidden" aria-live="polite"></p>
@@ -1239,7 +1239,7 @@
 
             <div>
               <label for="quick-order-quantity" class="quick-order-label" data-i18n="quick_order_quantity_label">จำนวน</label>
-              <select id="quick-order-quantity" name="quantity" class="quick-order-input" aria-describedby="quick-order-quantity-error">
+              <select id="quick-order-quantity" name="quantity" class="quick-order-input" data-custom-dropdown aria-describedby="quick-order-quantity-error">
                 <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -1252,7 +1252,7 @@
 
             <div>
               <label for="quick-order-budget-range" class="quick-order-label" data-i18n="quick_order_budget_range_label">ช่วงงบประมาณ</label>
-              <select id="quick-order-budget-range" name="budgetRange" class="quick-order-input" aria-describedby="quick-order-budget-range-error">
+              <select id="quick-order-budget-range" name="budgetRange" class="quick-order-input" data-custom-dropdown aria-describedby="quick-order-budget-range-error">
                 <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
                 <option value="under-500" data-i18n="quick_order_budget_under_500">ต่ำกว่า 500 บาท</option>
                 <option value="500-1000" data-i18n="quick_order_budget_500_1000">500-1,000 บาท</option>
@@ -1269,7 +1269,7 @@
 
             <div>
               <label for="quick-order-delivery-need" class="quick-order-label" data-i18n="quick_order_delivery_need_label">ช่วงเวลาที่ต้องการรับ</label>
-              <select id="quick-order-delivery-need" name="deliveryNeed" class="quick-order-input" aria-describedby="quick-order-delivery-need-error">
+              <select id="quick-order-delivery-need" name="deliveryNeed" class="quick-order-input" data-custom-dropdown aria-describedby="quick-order-delivery-need-error">
                 <option value="" data-i18n="quick_order_select_placeholder">เลือกข้อมูล</option>
                 <option value="urgent" data-i18n="quick_order_delivery_urgent">ด่วนที่สุด</option>
                 <option value="2-3-days" data-i18n="quick_order_delivery_2_3_days">ภายใน 2-3 วัน</option>
@@ -1437,6 +1437,7 @@
 
   <script src="assets/js/i18n/translations.js"></script>
   <script src="assets/js/core/quick-order.js"></script>
+  <script src="assets/js/ui/custom-dropdown.js"></script>
   <script src="assets/js/core/main.js"></script>
 </body>
 </html>

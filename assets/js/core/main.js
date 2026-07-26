@@ -261,6 +261,7 @@ window.addEventListener("languagechange", () => {
   renderReviews();
   renderFAQs();
   renderQuickOrderProductOptions();
+  initQuickOrderCustomDropdowns();
   syncQuickOrderConditionalFields();
   bindRevealAnimations(document.getElementById("faq"));
 });
@@ -495,6 +496,7 @@ const QUICK_ORDER_ERROR_FIELD_IDS = {
 };
 
 let quickOrderVisibilitySync = null;
+const quickOrderDropdowns = new Map();
 
 function getTodayIsoDate() {
   const now = new Date();
@@ -550,6 +552,22 @@ function renderQuickOrderProductOptions() {
   });
 }
 
+function initQuickOrderCustomDropdowns() {
+  const customDropdown = window.PremiumKhaoMaoCustomDropdown;
+  if (!customDropdown) return;
+
+  document.querySelectorAll("#quick-order-form select[data-custom-dropdown]").forEach((select) => {
+    let dropdown = quickOrderDropdowns.get(select);
+
+    if (!dropdown) {
+      dropdown = customDropdown.create(select);
+      quickOrderDropdowns.set(select, dropdown);
+    }
+
+    dropdown?.refresh();
+  });
+}
+
 function formatQuickOrderQuantityLabel(value, lang) {
   if (!value) return "";
   if (lang === "en") {
@@ -583,6 +601,7 @@ function clearQuickOrderErrors(form) {
   form.querySelectorAll(".quick-order-input").forEach((input) => {
     input.classList.remove("is-invalid");
     input.setAttribute("aria-invalid", "false");
+    document.querySelector(`[data-custom-dropdown-trigger-for="${input.id}"]`)?.classList.remove("is-invalid");
   });
 }
 
@@ -595,6 +614,7 @@ function showQuickOrderErrors(form, errors) {
     if (input) {
       input.classList.add("is-invalid");
       input.setAttribute("aria-invalid", "true");
+      document.querySelector(`[data-custom-dropdown-trigger-for="${input.id}"]`)?.classList.add("is-invalid");
     }
 
     if (errorEl) {
@@ -652,6 +672,7 @@ function initQuickOrderForm() {
   quickOrderVisibilitySync = syncVisibility;
 
   renderQuickOrderProductOptions();
+  initQuickOrderCustomDropdowns();
   deliveryDateInput.min = getTodayIsoDate();
   syncVisibility();
 
