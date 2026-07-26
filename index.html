@@ -448,9 +448,10 @@
                 </svg>
                 <span data-i18n="giftset_cta_primary">สั่งซื้อชุดของขวัญ</span>
               </a>
+              <!-- Temporarily hidden: Corporate/B2B is not yet available. -->
               <a href="#corporate"
                  onclick="trackEvent('click_corporate_cta', { section: 'giftset_secondary' })"
-                 class="inline-flex items-center justify-center rounded-full border border-leaf px-8 py-3.5 text-base font-semibold text-leaf bg-white hover:bg-cream">
+                 class="hidden inline-flex items-center justify-center rounded-full border border-leaf px-8 py-3.5 text-base font-semibold text-leaf bg-white hover:bg-cream">
                 <span data-i18n="giftset_cta_secondary">สั่งสำหรับองค์กร (B2B)</span>
               </a>
             </div>
@@ -1056,7 +1057,8 @@
     </section>
 
     <!-- 13. Corporate Order Section -->
-    <section id="corporate" class="py-16 sm:py-24 bg-cream">
+    <!-- Temporarily hidden: Corporate/B2B is not yet available. -->
+    <section id="corporate" class="hidden py-16 sm:py-24 bg-cream">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Premium dark container block with gold highlights -->
@@ -1330,7 +1332,8 @@
           <ul class="space-y-2.5 text-xs font-semibold">
             <li><a href="#products" class="hover:text-gold transition-colors" data-i18n="footer_link_products">เมนูแนะนำชิกเนเจอร์</a></li>
             <li><a href="#giftset" class="hover:text-gold transition-colors" data-i18n="footer_link_giftset">ชุดกล่องของฝากพรีเมี่ยม</a></li>
-            <li><a href="#corporate" class="hover:text-gold transition-colors" data-i18n="footer_link_corporate">สิทธิพิเศษสำหรับลูกค้าองค์กร (B2B)</a></li>
+            <!-- Temporarily hidden: Corporate/B2B is not yet available. -->
+            <li class="hidden"><a href="#corporate" class="hover:text-gold transition-colors" data-i18n="footer_link_corporate">สิทธิพิเศษสำหรับลูกค้าองค์กร (B2B)</a></li>
             <li><a href="#faq" class="hover:text-gold transition-colors" data-i18n="footer_link_faq">วันหมดอายุและการเก็บรักษา</a></li>
           </ul>
         </div>
