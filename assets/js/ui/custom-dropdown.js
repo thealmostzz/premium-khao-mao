@@ -45,9 +45,22 @@
     listbox.setAttribute("aria-label", label?.textContent?.trim() || select.name);
 
     const chevron = document.createElement("span");
-    chevron.className = "shrink-0 text-gold transition-transform duration-200";
+    chevron.className = "inline-flex h-5 w-5 shrink-0 items-center justify-center text-gold transition-transform duration-200";
     chevron.setAttribute("aria-hidden", "true");
-    chevron.innerHTML = "&#8964;";
+
+    const chevronIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    chevronIcon.setAttribute("viewBox", "0 0 20 20");
+    chevronIcon.setAttribute("fill", "none");
+    chevronIcon.setAttribute("stroke", "currentColor");
+    chevronIcon.setAttribute("stroke-width", "2");
+    chevronIcon.setAttribute("stroke-linecap", "round");
+    chevronIcon.setAttribute("stroke-linejoin", "round");
+    chevronIcon.classList.add("h-4", "w-4");
+
+    const chevronPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    chevronPath.setAttribute("d", "m5 7.5 5 5 5-5");
+    chevronIcon.append(chevronPath);
+    chevron.append(chevronIcon);
 
     const value = document.createElement("span");
     value.className = "min-w-0 truncate";
